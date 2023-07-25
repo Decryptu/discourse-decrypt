@@ -602,10 +602,15 @@ html body #main-outlet {
   border-top: none;
 }
 
-.btn {
+.btn:not(.d-icon) {
   height: 100%;
   color: #FFFFFF;
   background: #141217;
+}
+
+.btn.btn-hover {
+  color: #FFFFFF;
+  background: #212026;
 }
 
 .btn:hover {
