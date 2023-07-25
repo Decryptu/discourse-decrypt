@@ -164,7 +164,16 @@ ol.category-breadcrumb {
   max-width: 90vw;
 }
 
+.above-main-container-outlet.welcome-link-banner-connectors .welcome-wrapper .welcome-content p, .below-site-header-outlet.welcome-link-banner-connector .welcome-wrapper .welcome-content p{
+  margin-bottom: 10px;
+}
+
 /* filters */
 .select-kit.single-select.dropdown-select-box .select-kit-header{
   height:100%;
+}
+
+/* side menu */
+.hamburger-panel .revamped .sidebar-footer-container:before{
+  background: none;
 }
