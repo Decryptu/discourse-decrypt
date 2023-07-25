@@ -711,6 +711,11 @@ html body #main-outlet {
   height: inherit;
 }
 
+.alert.alert-info{
+  border-radius: 5px;
+  background-color: #eee9f70d;
+}
+
 /* user dropdown */
 
 .menu-panel.drop-down{
