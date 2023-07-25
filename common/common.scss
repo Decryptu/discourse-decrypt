@@ -627,6 +627,15 @@ html body #main-outlet {
   color: var(--primary-high)!important;
 }
 
+.topic-map{
+  border: none;
+  border-radius: 10px;
+}
+
+.topic-map .buttons .btn{
+  background: #00000061;
+}
+
 /* home filter */
 
 .nav-pills>li>a:hover, .nav-pills>li button:hover{
@@ -666,4 +675,10 @@ html body #main-outlet {
 
 .nav-pills:not(.user-nav)>li a.active, .nav-pills:not(.user-nav)>li>a{
   border-radius: 5px;
+}
+
+/* user dropdown */
+
+.menu-panel.drop-down{
+  border: 1px solid rgba(255,255,255,.12);
 }
