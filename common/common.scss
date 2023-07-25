@@ -787,6 +787,9 @@ blockquote{
   border-radius: 5px;
 }
 
+.admin-wizard-controls+.wizard-message+div{
+  overflow-x: scroll;
+}
 /* user dropdown */
 
 .menu-panel.drop-down{
@@ -920,4 +923,19 @@ input[type="text"], input[type="password"], input[type="datetime"], input[type="
 
 .user-main .about .secondary dl{
   padding: 5px 0px;
+}
+
+/* chat bottom */
+.discourse-no-touch .channels-list .chat-channel-row:hover, .channels-list .chat-channel-row.active{
+  border-radius: 5px;
+}
+
+.channels-list .chat-channel-row.can-leave:hover .toggle-channel-membership-button.-leave{
+  height: 40px;
+}
+
+.chat-drawer-container .channels-list .chat-channel-row{
+  background-color: #ffffff0f;
+  border-radius: 5px;
+  margin-right: 5px;
 }
