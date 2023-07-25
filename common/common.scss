@@ -688,6 +688,10 @@ html body #main-outlet {
   border: 1px solid rgba(255,255,255,.12);
 }
 
+.user-menu.revamped .quick-access-panel li.unread, .user-menu.revamped .quick-access-panel li.pending{
+  border-radius: 5px;
+}
+
 /* home recent */
 
 .latest-topic-list .table-heading, .top-topic-list .table-heading{
