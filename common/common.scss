@@ -690,6 +690,23 @@ html body #main-outlet {
   background: var(--danger)!important;
 }
 
+.admin-controls{
+  background-color: transparent;
+}
+
+.admin-controls nav {
+  background-color: #00000073;
+  border-radius: 5px;
+}
+
+.admin-controls nav:before{
+  display: none;
+}
+
+.admin-controls nav:after{
+  display: none;
+}
+
 /* user dropdown */
 
 .menu-panel.drop-down{
