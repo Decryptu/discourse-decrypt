@@ -759,6 +759,11 @@ blockquote{
   background-color: #0a090d7a;
 }
 
+.user-secondary-navigation .nav-stacked li:hover, .user-secondary-navigation .nav-stacked li.active{
+  background: #ffffff17;
+  border-radius: 5px;
+}
+
 /* user dropdown */
 
 .menu-panel.drop-down{
