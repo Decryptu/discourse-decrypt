@@ -602,10 +602,13 @@ html body #main-outlet {
   border-top: none;
 }
 
-.btn:not(.d-icon) {
+.btn:not(.no-text):not(.d-icon) {
   height: 100%;
   color: #FFFFFF;
   background: #141217;
+  background-clip: padding-box;
+  border: 1px solid transparent;
+  border-radius: 50%;
 }
 
 .discourse-no-touch .btn:hover, .discourse-no-touch .btn.btn-hover {
