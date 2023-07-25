@@ -749,6 +749,11 @@ blockquote{
   background-color: var(--quaternary)!important;
 }
 
+.user-main .about.collapsed-info .details{
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  background: transparent;
+}
+
 /* user dropdown */
 
 .menu-panel.drop-down{
@@ -781,6 +786,10 @@ blockquote{
 
 .user-menu.revamped .quick-access-panel li:hover{
   border-radius: 5px;
+}
+
+.user-menu.revamped #quick-access-profile li{
+  margin-bottom:5px;
 }
 
 /* home recent */
