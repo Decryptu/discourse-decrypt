@@ -537,6 +537,8 @@ html body #main-outlet {
   box-shadow: none;
 }
 
+/* custom footer */
+
 .custom-footer{
   background: #0a090d!important;
 }
@@ -563,4 +565,10 @@ html body #main-outlet {
 
 .custom-footer .third-box .social .social-link .d-icon {
   color: #67666D!important;
+}
+
+/* custom banner */
+
+.above-main-container-outlet.welcome-link-banner-connectors .welcome-wrapper, .below-site-header-outlet.welcome-link-banner-connector .welcome-wrapper {
+  margin: 2.5rem 2.5rem 0rem 2.5rem!important;
 }
