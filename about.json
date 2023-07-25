@@ -31,6 +31,7 @@
       "quaternary": "71bd9f",
       "header_background": "212026",
       "header_primary": "E2E1E6",
+      "--header_primary-low-mid": "E2E1E6",
       "highlight": "9a5cfd",
       "danger": "d05454",
       "success": "71bd9f",
