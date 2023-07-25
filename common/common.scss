@@ -801,3 +801,8 @@ html body #main-outlet {
 .select-kit.dropdown-select-box.period-chooser .period-chooser-row .top-date-string{
   color: darkgray;
 }
+
+/* home */
+.navigation-categories .navigation-container, .categories-list .navigation-container{
+  border-bottom: 2px solid rgba(255,255,255,0.12);
+}
