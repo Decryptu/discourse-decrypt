@@ -199,14 +199,6 @@ div.ac-wrap {
 .select-kit.dropdown-select-box .dropdown-select-box-header {
   border-radius: 8px;
   border: 1px solid transparent;
-  color: #FFFFFF!important;
-  background: #141217!important;
-}
-
-.btn:not(.themes-tab):not(.components-tab),
-.select-kit.dropdown-select-box .dropdown-select-box-header {
-  color: #FFFFFF!important;
-  background: #212026!important;
 }
 
 .post-admin-menu.popup-menu {
@@ -591,7 +583,8 @@ html body #main-outlet {
   animation: none!important;
 }
 
-// Custom background for first post in a topic
+/* Custom background for first post in a topic */
+
 #post_1{
   background-color: rgba(1,1,1,0.5);
   border-radius: 10px;
@@ -599,10 +592,23 @@ html body #main-outlet {
   margin-bottom: 40px;
 }
 
+/* topics */
+
 .topic-body{
   border-top: none;
 }
 
 .topic-avatar{
   border-top: none;
+}
+
+.btn {
+  height: 100%;
+  color: #FFFFFF;
+  background: #141217;
+}
+
+.btn.btn-hover {
+  color: #FFFFFF;
+  background: #212026;
 }
