@@ -582,3 +582,10 @@ html body #main-outlet {
 .topic-body.highlighted{
   animation: none!important;
 }
+
+// Custom background for first post in a topic
+#post_1{
+  background-color: rgba(1,1,1,0.5);
+  border-radius: 20px;
+  padding: 20px;
+}
