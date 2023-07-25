@@ -336,7 +336,7 @@ html body #main-outlet {
       box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.05);
       overflow: hidden;
       &.visited {
-        background-color: #18161B;
+        background-color: var(--secondary-low-mid);
         border: 1px solid rgba(var(--primary-rgb), 0.1);
         .discourse-tag {
           opacity: 0.75;
