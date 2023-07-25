@@ -538,5 +538,21 @@ html body #main-outlet {
 }
 
 .custom-footer{
-  background: var(--secondary)!important;
+  background: #0a090d!important;
+}
+
+.custom-footer .first-box .heading {
+  color: #FFFFFF!important;
+}
+
+.custom-footer .list span {
+  color: #FFFFFF!important;
+}
+
+.custom-footer .first-box .blurb {
+  color: #67666D!important;
+}
+
+.custom-footer .second-box .links ul {
+  color: #67666D!important;
 }
