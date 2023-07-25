@@ -13,6 +13,11 @@
   }
   .btn {
     height: 100%;
+    color: #FFFFFF;
+    background-color: #141217;
+  }
+  .btn:hover {
+    background-color: #212026;
   }
   .search-menu input[type="text"] {
     border: 1px solid transparent;
