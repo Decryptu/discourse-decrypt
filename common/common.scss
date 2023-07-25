@@ -641,6 +641,12 @@ html body #main-outlet {
   background: #00000061;
 }
 
+.blockquote{
+  border-left: 3px solid #8c00ff;
+  background-color: #7e00ff4d;
+  border-radius: 0px 5px 5px 0px;
+}
+
 /* home filter */
 
 .nav-pills>li>a:hover, .nav-pills>li button:hover{
