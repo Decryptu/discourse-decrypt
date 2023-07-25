@@ -332,7 +332,7 @@ html body #main-outlet {
       border: 1px solid rgba(var(--primary-rgb), 0.2);
       border-radius: 1em;
       position: relative;
-      transition: box-shadow 100ms ease-in-out;
+      transition: box-shadow 100ms ease-in-out, background-color 200ms ease-in-out;
       box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.05);
       overflow: hidden;
       &.visited {
