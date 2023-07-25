@@ -705,3 +705,14 @@ html body #main-outlet {
 .discourse-tag.box{
   background-color: #ffffff1f;
 }
+
+/* filter year */
+.select-kit.dropdown-select-box.period-chooser .period-chooser-header{
+  padding: 0px 10px;
+  background-color: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.12)!important;
+}
+
+.select-kit.dropdown-select-box.period-chooser .period-chooser-header h2.selected-name .top-date-string{
+  color: darkgray;
+}
