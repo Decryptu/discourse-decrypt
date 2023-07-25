@@ -852,5 +852,9 @@ blockquote{
 
 .user-main .deleted-posts{
   background-color: white;
-  border-radius: 1px;
+}
+
+.user-main .staff-counters>div span, .user-main .staff-counters>div a span{
+  padding: 5px 13px;
+  border-radius: 50%;
 }
