@@ -250,10 +250,15 @@ html {
 }
 
 html body #main-outlet {
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  background-color: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 12px;
+  transition-property: background-color;
+  transition-duration: .2s;
   margin-top: 30px;
   margin-bottom: 50px;
-  background: var(--secondary);
-  border-radius: 1em;
   padding: 3em 3em 5%;
   max-width: 1150px;
   .archetype-regular & {
@@ -264,7 +269,6 @@ html body #main-outlet {
     margin-top: 0;
   }
   padding-bottom: 5% !important; //overriding inline style
-  @include box-shadow;
   @media screen and (max-width: 1120px) {
     width: 80%;
   }
