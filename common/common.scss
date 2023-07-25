@@ -536,3 +536,7 @@ html body #main-outlet {
 .topic-list .main-link.focused {
   box-shadow: none;
 }
+
+.custom-footer{
+  background: var(--secondary)!important;
+}
