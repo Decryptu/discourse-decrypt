@@ -690,6 +690,10 @@ html body #main-outlet {
 
 /* home recent */
 
+.latest-topic-list .table-heading, .top-topic-list .table-heading{
+  color: white;
+}
+
 .table-heading{
   border-bottom: 2px solid rgba(255,255,255,.12);
 }
