@@ -663,3 +663,7 @@ html body #main-outlet {
 .boxed.white{
   background-color: transparent;
 }
+
+.nav-pills:not(.user-nav)>li a.active, .nav-pills:not(.user-nav)>li>a{
+  border-radius: 5px;
+}
