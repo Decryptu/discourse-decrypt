@@ -622,3 +622,7 @@ html body #main-outlet {
   color: #FFFFFF!important;
   background: #212026!important;
 }
+
+.discourse-no-touch .btn:hover .d-icon, .discourse-no-touch .btn.btn-hover .d-icon{
+  color: #FFFFFF!important;
+}
