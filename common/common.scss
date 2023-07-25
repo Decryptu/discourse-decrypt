@@ -692,6 +692,30 @@ html body #main-outlet {
   border-radius: 5px;
 }
 
+.user-menu.revamped .menu-tabs-container{
+  border-left: none;
+}
+
+.user-menu.revamped .bottom-tabs{
+  border-top: none;
+}
+
+.user-menu.revamped .tabs-list .btn{
+  margin-bottom: 5px;
+}
+
+.user-menu.revamped .quick-access-panel{
+  padding: 5px;
+}
+
+.user-menu.revamped .menu-tabs-container{
+  padding: 5px 5px 0 5px;
+}
+
+.user-menu.revamped .quick-access-panel li:hover{
+  border-radius: 5px;
+}
+
 /* home recent */
 
 .latest-topic-list .table-heading, .top-topic-list .table-heading{
