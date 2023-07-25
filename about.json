@@ -26,6 +26,7 @@
     },
     "decrypt-dark": {
       "primary": "e0e0e0",
+      "primary-low-mid": "E2E1E6",
       "secondary": "2d2d2d",
       "tertiary": "9a5cfd",
       "quaternary": "71bd9f",
