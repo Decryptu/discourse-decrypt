@@ -1,5 +1,5 @@
 {
-  "name": "Air Theme",
+  "name": "Decrypt Theme",
   "about_url": null,
   "license_url": null,
   "components": [
@@ -12,7 +12,7 @@
     "serialize_topic_excerpts": true
   },
   "color_schemes": {
-    "air-light": {
+    "decrypt-light": {
       "primary": "1c1c1c",
       "secondary": "f9fcff",
       "tertiary": "3877e5",
@@ -24,7 +24,7 @@
       "success": "71bd9f",
       "love": "c16ad7"
     },
-    "air-dark": {
+    "decrypt-dark": {
       "primary": "e0e0e0",
       "secondary": "2d2d2d",
       "tertiary": "9a5cfd",
