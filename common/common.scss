@@ -707,6 +707,15 @@ blockquote{
   background: #ffffff24;
 }
 
+.discourse-no-touch .sidebar-section-wrapper .sidebar-section-header-wrapper:hover{
+  background: transparent;
+}
+
+.discourse-no-touch .sidebar-section-wrapper .sidebar-section-header-wrapper .btn.dropdown-select-box-header, .discourse-no-touch .sidebar-section-wrapper .sidebar-section-header-wrapper .sidebar-section-header-button{
+  border-radius: 50px;
+  margin-left: 5px;
+}
+
 /* admin menu */
 
 .boxed.white{
