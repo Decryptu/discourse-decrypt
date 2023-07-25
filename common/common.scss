@@ -858,3 +858,20 @@ blockquote{
   padding: 5px 13px;
   border-radius: 50%;
 }
+
+.user-main .about .details{
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.nav-pills>li a.active, .nav-pills>li button.active{
+  border-radius: 5px;
+}
+
+.nav-pills>li>a:hover, .nav-pills>li button:hover{
+  border-radius: 5px;
+}
+
+.user-content-wrapper .user-content{
+  padding: 20px;
+}
