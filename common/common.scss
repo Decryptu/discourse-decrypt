@@ -13,12 +13,6 @@
   }
   .btn {
     height: 100%;
-    color: #FFFFFF!important;
-    background: #141217!important;
-  }
-  .btn.btn-hover {
-    color: #FFFFFF!important;
-    background: #212026!important;
   }
   .search-menu input[type="text"] {
     border: 1px solid transparent;
@@ -205,6 +199,14 @@ div.ac-wrap {
 .select-kit.dropdown-select-box .dropdown-select-box-header {
   border-radius: 8px;
   border: 1px solid transparent;
+  color: #FFFFFF!important;
+  background: #141217!important;
+}
+
+.btn:not(.themes-tab):not(.components-tab),
+.select-kit.dropdown-select-box .dropdown-select-box-header {
+  color: #FFFFFF!important;
+  background: #212026!important;
 }
 
 .post-admin-menu.popup-menu {
