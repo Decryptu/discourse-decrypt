@@ -2,6 +2,9 @@
   "name": "Decrypt Theme",
   "about_url": null,
   "license_url": null,
+  "assets": {
+    "blur_image": "assets/blur.svg"
+  },
   "components": [
     "https://github.com/jordanvidrine/discourse-category-group-boxes.git",
     "https://github.com/discourse/discourse-loading-slider.git",
