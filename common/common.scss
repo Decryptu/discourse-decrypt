@@ -575,3 +575,9 @@ html body #main-outlet {
 .above-main-container-outlet.welcome-link-banner-connectors .welcome-wrapper, .below-site-header-outlet.welcome-link-banner-connector .welcome-wrapper {
   margin: 2.5rem 2.5rem 0rem 2.5rem!important;
 }
+
+/* topic animation */
+
+.topic-body.highlighted{
+  animation: none!important;
+}
