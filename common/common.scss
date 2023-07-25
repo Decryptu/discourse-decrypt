@@ -602,13 +602,13 @@ html body #main-outlet {
   border-top: none;
 }
 
-.btn:not(.d-icon) {
+.btn:not(.btn-sidebar-toggle) {
   height: 100%;
   color: #FFFFFF;
   background: #141217;
-  background-clip: padding-box;
-  border: 1px solid transparent;
-  border-radius: 50%;
+  border: 0.8px solid #2F2E32!important;
+  border-radius: 10px!important;
+  padding: 10px;
 }
 
 .discourse-no-touch .btn:hover, .discourse-no-touch .btn.btn-hover {
@@ -617,4 +617,12 @@ html body #main-outlet {
 
 .discourse-no-touch .btn:hover .d-icon, .discourse-no-touch .btn.btn-hover .d-icon{
   color: #FFFFFF!important;
+}
+
+.discourse-no-touch .btn:hover, .discourse-no-touch .btn.btn-hover{
+  color: white;
+}
+
+.btn-primary .d-icon, .admin-wizards-custom-fields .btn.save:enabled .d-icon{
+  color: var(--primary-high)!important;
 }
