@@ -695,6 +695,14 @@ blockquote{
   display: inline-table;
 }
 
+.sidebar-section-link-wrapper .sidebar-section-link:focus, .sidebar-section-link-wrapper .sidebar-section-link:hover{
+  background: #ffffff14;
+}
+
+.sidebar-section-link-wrapper .sidebar-section-link.active{
+  background: #ffffff24;
+}
+
 /* admin menu */
 
 .boxed.white{
