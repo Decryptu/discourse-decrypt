@@ -146,3 +146,9 @@ ol.category-breadcrumb {
   border: 1px solid rgba(var(--primary-rgb), 0.1);
   margin-bottom: 1em;
 }
+
+/* custom banner */
+
+.above-main-container-outlet.welcome-link-banner-connectors .welcome-wrapper .featured-banner-link, .below-site-header-outlet.welcome-link-banner-connector .welcome-wrapper .featured-banner-link{
+  flex-direction: row;
+}
