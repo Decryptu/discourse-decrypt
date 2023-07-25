@@ -723,7 +723,9 @@ html body #main-outlet {
 
 .admin-customize .themes-list-header .tab.active{
   color: white;
+  background-color: var(--quaternary);
 }
+
 /* user dropdown */
 
 .menu-panel.drop-down{
