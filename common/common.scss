@@ -707,6 +707,10 @@ html body #main-outlet {
   display: none;
 }
 
+.btn:not(.btn-sidebar-toggle){
+  height: inherit;
+}
+
 /* user dropdown */
 
 .menu-panel.drop-down{
