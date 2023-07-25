@@ -682,6 +682,14 @@ html body #main-outlet {
   border-radius: 5px;
 }
 
+.btn.ok{
+  background: var(--success)!important;
+}
+
+.btn.cancel{
+  background: var(--danger)!important;
+}
+
 /* user dropdown */
 
 .menu-panel.drop-down{
