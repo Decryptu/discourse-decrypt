@@ -160,6 +160,10 @@ ol.category-breadcrumb {
   justify-content: center;
 }
 
+.above-main-container-outlet.welcome-link-banner-connectors .welcome-wrapper, .below-site-header-outlet.welcome-link-banner-connector .welcome-wrapper{
+  max-width: 90vw;
+}
+
 /* filters */
 .select-kit.single-select.dropdown-select-box .select-kit-header{
   height:100%;
