@@ -626,3 +626,9 @@ html body #main-outlet {
 .btn-primary .d-icon, .admin-wizards-custom-fields .btn.save:enabled .d-icon{
   color: var(--primary-high)!important;
 }
+
+/* home filter */
+
+.nav-pills>li>a:hover, .nav-pills>li button:hover{
+  background-color: #6eaceb4a;
+}
