@@ -655,6 +655,14 @@ blockquote{
   gap: 5px;
 }
 
+.topic-status-info, .topic-timer-info{
+  border-top: 1px solid #ffffff36;
+}
+
+.topic-list-item td:first-child, .topic-post{
+  border-top: 1px solid #ffffff36;
+}
+
 /* home filter */
 
 .nav-pills>li>a:hover, .nav-pills>li button:hover{
