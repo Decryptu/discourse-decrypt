@@ -915,6 +915,10 @@ tbody{
   border-bottom: 1px solid rgba(255,255,255,0.12);
 }
 
+input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"]{
+  border: 0px;
+}
+
 /* user profile */
 .user-main .staff-counters{
   background: #915FF4;
