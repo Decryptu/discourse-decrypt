@@ -720,6 +720,10 @@ blockquote{
   margin-bottom: 5px;
 }
 
+.sidebar-section-messages{
+  display: none;
+}
+
 /* admin menu */
 
 .boxed.white{
@@ -963,4 +967,16 @@ input[type="text"], input[type="password"], input[type="datetime"], input[type="
   background-color: #ffffff0f;
   border-radius: 5px;
   margin-right: 5px;
+}
+
+/* dernière visite */
+
+.topic-list .topic-list-item-separator .topic-list-data span{
+  background-color: #7CAAE6;
+  color: black;
+  border-radius: 2px;
+}
+
+.topic-list .topic-list-item-separator .topic-list-data{
+  border-top: 1px solid #7CAAE6;
 }
