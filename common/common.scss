@@ -659,9 +659,9 @@ blockquote{
   border-top: 1px solid #ffffff36;
 }
 
-/*.topic-list-item td:first-child, .topic-post{
-  border-top: 1px solid #ffffff36;
-}*/
+.topic-list-item td:first-child, .topic-post{
+  border-bottom: 1px solid #ffffff36;
+}
 
 /* home filter */
 
