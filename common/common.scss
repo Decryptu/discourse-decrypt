@@ -978,6 +978,11 @@ input[type="text"], input[type="password"], input[type="datetime"], input[type="
   padding: 5px 0px;
 }
 
+.d-editor-textarea-wrapper{
+  border: 0.8px solid rgb(47, 46, 50);
+  border-radius: 5px;
+}
+
 /* chat bottom */
 
 .discourse-no-touch .channels-list .chat-channel-row:hover, .channels-list .chat-channel-row.active{
