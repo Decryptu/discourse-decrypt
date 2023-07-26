@@ -980,3 +980,13 @@ input[type="text"], input[type="password"], input[type="datetime"], input[type="
 .topic-list .topic-list-item-separator .topic-list-data{
   border-top: 1px solid #7CAAE6;
 }
+
+.small-action.topic-post-visited .topic-post-visited-line .topic-post-visited-message{
+  background-color: #7CAAE6;
+  color: black;
+  border-radius: 2px;
+}
+
+.small-action.topic-post-visited .topic-post-visited-line{
+  border-top: 1px solid #7CAAE6;
+}
