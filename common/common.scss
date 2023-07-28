@@ -935,6 +935,10 @@ input[type="text"], input[type="password"], input[type="datetime"], input[type="
   border-radius: 10px 10px 0px 0px;
 }
 
+.custom-category-boxes:not(.above-discovery-categories-outlet) .category-box{
+  border: 1px solid #333333;
+}
+
 /* user profile */
 .user-main .staff-counters{
   background: #915FF4;
