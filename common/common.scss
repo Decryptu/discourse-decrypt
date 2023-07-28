@@ -586,7 +586,8 @@ html body #main-outlet {
 /* Custom background for first post in a topic */
 
 #post_1{
-  background-color: rgba(1,1,1,0.5);
+  background-color: black;
+  border: 1px solid #1A1A1A;
   border-radius: 10px;
   padding: 20px;
   margin-bottom: 40px;
