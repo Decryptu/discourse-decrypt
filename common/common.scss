@@ -329,7 +329,7 @@ html body #main-outlet {
       display: flex;
       margin-bottom: 0.5em;
       background-color: #212026;
-      border: 1px solid rgba(var(--primary-rgb), 0.2);
+      border: 1px solid rgba(var(--primary-rgb), 0.1);
       border-radius: 1em;
       position: relative;
       transition: box-shadow 100ms ease-in-out, background-color 200ms ease-in-out;
@@ -342,7 +342,7 @@ html body #main-outlet {
           opacity: 0.75;
         }
         &:hover {
-          border: 1px solid rgba(var(--primary-rgb), 0.25);
+          border: 1px solid #9290EA;
           .discourse-tag {
             opacity: 1;
           }
