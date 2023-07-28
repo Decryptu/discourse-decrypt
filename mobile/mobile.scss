@@ -188,6 +188,11 @@ ol.category-breadcrumb {
   padding: 20px 10px;
 }
 
+html body.static-tos #main-outlet, html body.static-privacy #main-outlet, html body.about-page #main-outlet, html body.static-faq #main-outlet, html body.tags-page #main-outlet, html body.badges-page #main-outlet, html body.archetype-banner #main-outlet, html body.archetype-regular #main-outlet, html body.archetype-private_message #main-outlet, html body.admin-interface #main-outlet, html body.user-summary-page #main-outlet, html body.user-activity-page #main-outlet, html body.user-invites-page #main-outlet, html body.user-preferences-page #main-outlet, html body.staff:not(.navigation-topics) #main-outlet{
+  width: calc(100% - 1em);
+  justify-self: center;
+}
+
 /* home */
 .topic-list .num{
   margin-left: 20px;
