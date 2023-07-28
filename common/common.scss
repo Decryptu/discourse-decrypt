@@ -925,6 +925,10 @@ input[type="text"], input[type="password"], input[type="datetime"], input[type="
   border: 0px!important;
 }
 
+.select-kit.combo-box .select-kit-filter .filter-input, .select-kit.combo-box .select-kit-filter .filter-input:focus, .select-kit.combo-box .select-kit-filter .filter-input:active{
+  border: 0px!important;
+}
+
 /* user profile */
 .user-main .staff-counters{
   background: #915FF4;
