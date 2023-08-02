@@ -1040,3 +1040,11 @@ input[type="text"], input[type="password"], input[type="datetime"], input[type="
 .small-action.topic-post-visited .topic-post-visited-line{
   border-bottom: 1px solid #7CAAE6;
 }
+
+/* emoji */
+
+img.emoji{
+  width: 16px;
+  height: 16px;
+  vertical-align: top;
+}
