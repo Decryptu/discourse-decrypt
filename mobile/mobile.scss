@@ -206,3 +206,21 @@ html body.static-tos #main-outlet, html body.static-privacy #main-outlet, html b
 #main-outlet-wrapper #main-outlet{
   background-color: #111111;
 }
+
+/* emoji */
+
+img.emoji {
+  width: 18px;
+    height: 18px;
+    vertical-align: middle;
+    margin-right: 1px;
+    margin-bottom: 3px;
+}
+
+#topic-title h1 a > img.emoji {
+  width: 23px;
+  height: 23px;
+  vertical-align: middle;
+  margin-right: 1px;
+  margin-bottom: 3px;
+}
