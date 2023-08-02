@@ -1048,3 +1048,9 @@ img.emoji {
   height: 16px;
   vertical-align: top;
 }
+
+#topic-title h1 a > img.emoji {
+  width: 20px!important;
+  height: 20px!important;
+  vertical-align: middle!important;
+}
