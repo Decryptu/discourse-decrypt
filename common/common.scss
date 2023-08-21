@@ -585,7 +585,8 @@ html body #main-outlet {
 }
 
 .btn-flat.welcome-link-banner-close.btn.no-text.btn-icon {
-  border-radius: 0px !important;
+  border: 0px !important;
+  background: transparent !important;
 }
 
 
