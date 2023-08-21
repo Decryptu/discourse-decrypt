@@ -576,9 +576,6 @@ html body #main-outlet {
 
 .above-main-container-outlet.welcome-link-banner-connectors .welcome-wrapper, .below-site-header-outlet.welcome-link-banner-connector .welcome-wrapper {
   margin: 2.5rem 2.5rem 0rem 2.5rem!important;
-}
-
-.welcome-wrapper{
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
   background-color: #1111117e;
