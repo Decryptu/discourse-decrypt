@@ -328,22 +328,22 @@ html body #main-outlet {
       width: 100%;
       display: flex;
       margin-bottom: 0.5em;
-      background-color: #212026;
+      background-color: var(--header_background);
       border: 1px solid rgba(var(--primary-rgb), 0.1);
       border-radius: 1em;
       position: relative;
       transition: box-shadow 100ms ease-in-out, background-color 200ms ease-in-out, border 200ms ease-in-out;
-      box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.05);
+      box-shadow: 0px 0px 8px var(--quaternary-low);
       overflow: hidden;
       &.visited {
         background-color: var(--secondary);
         transition: box-shadow 100ms ease-in-out, background-color 200ms ease-in-out, border 200ms ease-in-out;
-        border: 1px solid #333333;
+        border: 1px solid var(--secondary-high);
         .discourse-tag {
           opacity: 0.75;
         }
         &:hover {
-          border: 1px solid #9290EA;
+          border: 1px solid var(--tertiary);
           .discourse-tag {
             opacity: 1;
           }
@@ -352,7 +352,7 @@ html body #main-outlet {
       &:hover {
         //background-color: var(--secondary);
         box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);
-        border: 1px solid #9290EA;
+        border: 1px solid var(--tertiary);
         a.title:not(.badge-notification),
         a.topic-excerpt {
           color: var(--primary) !important;
@@ -642,7 +642,7 @@ html body #main-outlet {
 }
 
 .topic-map{
-  background: #00000061;
+  background: var(--quaternary-low);
   border: none;
   border-radius: 5px;
 }
@@ -652,7 +652,7 @@ html body #main-outlet {
 }
 
 .topic-map .buttons .btn{
-  background: #00000061;
+  background: var(--quaternary-low);
 }
 
 blockquote{
@@ -851,7 +851,7 @@ tbody{
 }
 
 .wizard-message{
-  background-color: #00000061;
+  background-color: var(--quaternary-low);
   border-radius: 5px;
 }
 
@@ -860,7 +860,7 @@ tbody{
 }
 
 .group-details-container{
-  background: #0000004d;
+  background: var(--quaternary-low);
   border-radius: 5px;
 }
 /* user dropdown */
