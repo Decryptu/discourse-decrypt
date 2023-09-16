@@ -49,15 +49,9 @@
     },
     "decrypt-dark": {
       "primary": "e0e0e0",
-      "primary-low-mid": "E2E1E6",
-      "primary-very-low": "00000061",
       "secondary": "000000",
-      "secondary-very-high": "1f1f1f",
       "tertiary": "9390F1",
-      "tertiary-low": "9a5cfd80",
-      "tertiary-med": "b689ff",
       "quaternary": "6EACEB",
-      "quaternary-low": "6eaceb4a",
       "header_background": "212026",
       "header_primary": "E2E1E6",
       "header_primary-low-mid": "E2E1E6",
@@ -65,7 +59,25 @@
       "highlight-medium": "212026",
       "danger": "d05454",
       "success": "71bd9f",
-      "love": "c16ad7"
+      "love": "c16ad7",
+      "primary-very-low": "00000061",
+      "primary-low": "313131",
+      "primary-low-mid": "E2E1E6",
+      "primary-medium": "909090",
+      "primary-high": "a6a6a6",
+      "primary-very-high": "c7c7c7",
+      "secondary-low": "bdbdbd",
+      "secondary-medium": "919191",
+      "secondary-high": "646464",
+      "secondary-very-high": "1f1f1f",
+      "tertiary-low": "9a5cfd80",
+      "tertiary-medium": "b689ff",
+      "tertiary-high": "646464",
+      "tertiary-very-high": "1f1f1f",
+      "quaternary-low": "6eaceb4a",
+      "quaternary-medium": "919191",
+      "quaternary-high": "646464",
+      "quaternary-very-high": "1f1f1f"
     }
   }
 }
