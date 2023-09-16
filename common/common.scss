@@ -1083,3 +1083,19 @@ img.emoji.only-emoji{
 .names span a{
   color: var(--primary)!important;
 }
+
+.topic-meta-data .post-info a{
+  color: var(--primary-medium)!important;
+}
+
+.post-info.edits .widget-button{
+  color: var(--primary-medium)!important;
+}
+
+nav.post-controls .actions button.create{
+  color: var(--primary-medium)!important;
+}
+
+.topic-map h4.names span a{
+  color: var(--primary)!important;
+}
