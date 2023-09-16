@@ -17,7 +17,7 @@
   "color_schemes": {
     "decrypt-light": {
       "primary": "e0e0e0",
-      "secondary": "000000",
+      "secondary": "FFFFFF",
       "tertiary": "9390F1",
       "quaternary": "6EACEB",
       "header_background": "212026",
@@ -34,8 +34,8 @@
       "primary-medium": "909090",
       "primary-high": "a6a6a6",
       "primary-very-high": "c7c7c7",
-      "secondary-low": "bdbdbd",
-      "secondary-medium": "919191",
+      "secondary-low": "E5E5E5",
+      "secondary-medium": "FFFFFF",
       "secondary-high": "646464",
       "secondary-very-high": "1f1f1f",
       "tertiary-low": "9a5cfd80",

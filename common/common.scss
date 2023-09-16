@@ -242,7 +242,7 @@ html {
     left: 0;
     height: 100vh;
     width: 100vw;
-    background-color: #0a090d;
+    background-color: var(--secondary-medium);
     background-image: url($blur_image);
     background-repeat: no-repeat;
     background-position: center;
@@ -545,7 +545,7 @@ html body #main-outlet {
 /* custom footer */
 
 .custom-footer{
-  background: #0a090d!important;
+  background: var(--secondary-medium)!important;
 }
 
 .custom-footer .first-box .heading {
