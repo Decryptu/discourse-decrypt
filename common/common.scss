@@ -656,8 +656,8 @@ html body #main-outlet {
 }
 
 blockquote{
-  border-left: 3px solid #9390F1;
-  background-color: #7e00ff4d;
+  border-left: 3px solid var(--tertiary);
+  background-color: var(--highlight-medium);
   border-radius: 0px 5px 5px 0px;
 }
 
@@ -692,13 +692,13 @@ tbody{
 /* home filter */
 
 .nav-pills>li>a:hover, .nav-pills>li button:hover{
-  background-color: #6eaceb4a;
+  background-color: var(--highlight-bg);
 }
 
 .list-controls .combo-box .combo-box-header{
   color: var(--primary-very-high);
-  background: #141217;
-  border: 0.8px solid #2F2E32 !important;
+  background: var(--secondary-very-high);
+  border: 0.8px solid var(--secondary-high) !important;
   border-radius: 5px !important;
 }
 
@@ -715,12 +715,12 @@ tbody{
 .sidebar-wrapper{
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
-  background-color: rgba(255,255,255,.08);
+  background-color: var(--quaternary-medium);
   border-radius: 12px;
 }
 
 .sidebar-wrapper .sidebar-container{
-  border: 1px solid rgba(255,255,255,0.12);
+  border: 1px solid var(--quaternary-low);
   border-radius: 15px;
 }
 
@@ -785,7 +785,7 @@ tbody{
 }
 
 .admin-controls nav {
-  background-color: #00000073;
+  background-color: var(--quaternary-low);
   border-radius: 5px;
 }
 
@@ -807,7 +807,7 @@ tbody{
 }
 
 .admin-customize .themes-list-container{
-  background-color: #00000070;
+  background-color: var(--quaternary-low);
   border-radius: 0px 0px 5px 5px;
 }
 
@@ -818,7 +818,7 @@ tbody{
 }
 
 .user-main .about.collapsed-info .details{
-  border-bottom: 1px solid rgba(255,255,255,0.12);
+  border-bottom: 1px solid var(--secondary-high);
   background: transparent;
 }
 
@@ -866,7 +866,7 @@ tbody{
 /* user dropdown */
 
 .menu-panel.drop-down{
-  border: 1px solid rgba(255,255,255,.12);
+  border: 1px solid var(--secondary-high);
 }
 
 .user-menu.revamped .quick-access-panel li.unread, .user-menu.revamped .quick-access-panel li.pending{
@@ -908,11 +908,11 @@ tbody{
 }
 
 .table-heading{
-  border-bottom: 1px solid rgba(255,255,255,.12);
+  border-bottom: 1px solid var(--secondary-high);
 }
 
 .latest-topic-list-item{
-  border-bottom: 1px solid rgba(255,255,255,.12);
+  border-bottom: 1px solid var(--secondary-high);
 }
 
 .discourse-tag.box{
@@ -922,21 +922,21 @@ tbody{
 /* filter year */
 .select-kit.dropdown-select-box.period-chooser .period-chooser-header{
   padding: 0px 10px;
-  background-color: rgba(255,255,255,.08);
-  border: 1px solid rgba(255,255,255,.12)!important;
+  background-color: var(--secondary-very-high);
+  border: 1px solid var(--secondary-high)!important;
 }
 
 .select-kit.dropdown-select-box.period-chooser .period-chooser-header h2.selected-name .top-date-string{
-  color: darkgray;
+  color: var(--primary-medium);
 }
 
 .select-kit.dropdown-select-box.period-chooser .period-chooser-row .top-date-string{
-  color: darkgray;
+  color: var(--primary-medium);
 }
 
 /* home */
 .navigation-categories .navigation-container, .categories-list .navigation-container{
-  border-bottom: 1px solid rgba(255,255,255,0.12);
+  border-bottom: 1px solid var(--secondary-high);
 }
 
 input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"]{
@@ -952,12 +952,12 @@ input[type="text"], input[type="password"], input[type="datetime"], input[type="
 }
 
 .custom-category-boxes:not(.above-discovery-categories-outlet) .category-box{
-  border: 1px solid #333333;
+  border: 1px solid var(--secondary-high);
 }
 
 /* user profile */
 .user-main .staff-counters{
-  background: #915FF4;
+  background: var(--tertiary);
   border-radius: 5px;
 }
 
@@ -992,18 +992,18 @@ input[type="text"], input[type="password"], input[type="datetime"], input[type="
 }
 
 .select-kit.combo-box .select-kit-header{
-  background: #141217;
-  border: 0.8px solid #2F2E32 !important;
+  background: var(--secondary-very-high);
+  border: 0.8px solid var(--secondary-high) !important;
 }
 
 .select-kit.multi-select .multi-select-header{
-  background: #141217;
-  border: 0.8px solid #2F2E32 !important;
+  background: var(--secondary-very-high);
+  border: 0.8px solid var(--secondary-high) !important;
 }
 
 input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"]{
-  background: #141217;
-  border: 0.8px solid #2F2E32 !important;
+  background: var(--secondary-very-high);
+  border: 0.8px solid var(--secondary-high) !important;
 }
 
 .user-main .about.has-background .details{
@@ -1015,7 +1015,7 @@ input[type="text"], input[type="password"], input[type="datetime"], input[type="
 }
 
 .d-editor-textarea-wrapper{
-  border: 0.8px solid rgb(47, 46, 50);
+  border: 0.8px solid var(--highlight-medium);
   border-radius: 5px;
 }
 
