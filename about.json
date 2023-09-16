@@ -42,10 +42,10 @@
       "tertiary-medium": "b689ff",
       "tertiary-high": "646464",
       "tertiary-very-high": "1f1f1f",
-      "quaternary-low": "6eaceb4a",
-      "quaternary-medium": "919191",
-      "quaternary-high": "646464",
-      "quaternary-very-high": "1f1f1f"
+      "quaternary-low": "FFFFFFED",
+      "quaternary-medium": "FFFFFFF3",
+      "quaternary-high": "FFFFFFF6",
+      "quaternary-very-high": "FFFFFFF8"
     },
     "decrypt-dark": {
       "primary": "e0e0e0",
@@ -74,10 +74,10 @@
       "tertiary-medium": "b689ff",
       "tertiary-high": "646464",
       "tertiary-very-high": "1f1f1f",
-      "quaternary-low": "6eaceb4a",
-      "quaternary-medium": "919191",
-      "quaternary-high": "646464",
-      "quaternary-very-high": "1f1f1f"
+      "quaternary-low": "00000011",
+      "quaternary-medium": "0000000B",
+      "quaternary-high": "00000008",
+      "quaternary-very-high": "00000006"
     }
   }
 }
