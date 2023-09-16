@@ -252,8 +252,8 @@ html {
 html body #main-outlet {
   //-webkit-backdrop-filter: blur(8px);
   //backdrop-filter: blur(8px);
-  background-color: #111111;
-  border: 1px solid #333333;
+  background-color: var(--secondary-very-high);
+  border: 1px solid var(--secondary-high);
   border-radius: 12px;
   margin-top: 30px;
   margin-bottom: 50px;
