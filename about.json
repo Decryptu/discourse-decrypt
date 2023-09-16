@@ -45,7 +45,8 @@
       "quaternary-low": "FFFFFFED",
       "quaternary-medium": "FFFFFFF3",
       "quaternary-high": "FFFFFFF6",
-      "quaternary-very-high": "FFFFFFF8"
+      "quaternary-very-high": "FFFFFFF8",
+      "shadow-modal": "FFFFFFED"
     },
     "decrypt-dark": {
       "primary": "e0e0e0",
@@ -77,7 +78,8 @@
       "quaternary-low": "00000011",
       "quaternary-medium": "0000000B",
       "quaternary-high": "00000008",
-      "quaternary-very-high": "00000006"
+      "quaternary-very-high": "00000006",
+      "shadow-modal": "00000011"
     }
   }
 }
