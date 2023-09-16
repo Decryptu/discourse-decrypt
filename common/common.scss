@@ -1103,3 +1103,11 @@ nav.post-controls .actions button.create{
 .topic-map h4{
   color: var(--primary-medium)!important;
 }
+
+.select-kit .select-kit-row.is-highlighted{
+  background-color: var(--primary-medium);
+}
+
+.select-kit .select-kit-row.is-selected{
+  background-color: var(--primary-low)
+}
