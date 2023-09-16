@@ -148,10 +148,10 @@ div.ac-wrap {
   border-radius: 4px;
 }
 .d-header {
-  background-color: #000000;
-  border-bottom:0.8px solid #1A1A1A;
+  background-color: var(--secondary);
+  border-bottom:0.8px solid var(--secondary-low);
   box-shadow: none;
-  background-color: #0a090d;
+  background-color: var(--secondary-medium);
 }
 
 .d-header-icons .d-icon {
