@@ -1109,5 +1109,9 @@ nav.post-controls .actions button.create{
 }
 
 .select-kit .select-kit-row.is-selected{
-  background-color: var(--primary-low)
+  background-color: var(--primary-low);
+}
+
+.discourse-no-touch .btn-flat:hover, .discourse-no-touch .btn-flat.btn-hover{
+  color: var(--secondary);
 }

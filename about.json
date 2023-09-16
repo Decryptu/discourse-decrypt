@@ -31,8 +31,8 @@
       "primary-very-low": "7F7F7F",
       "primary-low": "313131",
       "primary-low-mid": "E2E1E6",
-      "primary-medium": "909090",
-      "primary-high": "a6a6a6",
+      "primary-medium": "4a4a4a",
+      "primary-high": "6f6f6f",
       "primary-very-high": "191919",
       "secondary-low": "E5E5E5",
       "secondary-medium": "FFFFFF",
@@ -46,7 +46,8 @@
       "quaternary-medium": "FFFFFFF3",
       "quaternary-high": "FFFFFFF6",
       "quaternary-very-high": "FFFFFFF8",
-      "shadow-modal": "FFFFFFED"
+      "shadow-modal": "FFFFFFED",
+      "d-sidebar-link-color": "797979"
     },
     "decrypt-dark": {
       "primary": "e0e0e0",
