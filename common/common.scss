@@ -1139,3 +1139,7 @@ nav.post-controls .actions button.create .d-icon{
 .cooked h1, .cooked h2, .cooked h3 {
   color: #9390F1!important;
 }
+
+.no-touch .chat-message-container:hover, .no-touch .chat-transcript:hover, .no-touch .chat-message-container.-active, .no-touch .-active.chat-transcript{
+  background-color: var(--header_background)!important;
+}
