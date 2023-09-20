@@ -1143,3 +1143,7 @@ nav.post-controls .actions button.create .d-icon{
 .no-touch .chat-message-container:hover, .no-touch .chat-transcript:hover, .no-touch .chat-message-container.-active, .no-touch .-active.chat-transcript{
   background-color: var(--header_background)!important;
 }
+
+.chat-message-info__username__name{
+  color: var(--primary)!important;
+}
