@@ -1147,3 +1147,7 @@ nav.post-controls .actions button.create .d-icon{
 .chat-message-info__username__name{
   color: var(--primary)!important;
 }
+
+.chat-drawer-header, .chat-composer__wrapper{
+  background: var(--header_background)!important;
+}
