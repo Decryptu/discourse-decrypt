@@ -1151,3 +1151,7 @@ nav.post-controls .actions button.create .d-icon{
 .chat-drawer-header, .chat-composer__wrapper{
   background: var(--header_background)!important;
 }
+
+.chat-message-separator-date .chat-message-separator__text{
+  color: var(--primary-medium)!important;
+}
