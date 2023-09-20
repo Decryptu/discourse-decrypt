@@ -1157,5 +1157,9 @@ nav.post-controls .actions button.create .d-icon{
 }
 
 .user-info .user-detail .title{
+  color: var(--primary-medium)!important;
+}
+
+.user-info .user-detail .name a, .user-info .user-detail .username a{
   color: var(--primary)!important;
 }
