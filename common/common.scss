@@ -1200,3 +1200,7 @@ padding: 20px!important;
 .admin-customize .themes-list-container .themes-list-item:not(.inactive-indicator):not(.selected):hover{
   background: var(--secondary);
 }
+
+.admin-contents table tr:hover{
+  background: var(--secondary);
+}
