@@ -1192,3 +1192,11 @@ padding: 20px!important;
 .discourse-no-touch .btn-flat:hover .d-icon{
   color: var(--tertiary)!important;
 }
+
+.content-list ul li a.active{
+  background: var(--secondary);
+}
+
+.admin-customize .themes-list-container .themes-list-item:not(.inactive-indicator):not(.selected):hover{
+  background: var(--secondary);
+}
