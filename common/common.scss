@@ -1172,3 +1172,11 @@ nav.post-controls .actions button.create .d-icon{
 .user-content{
 padding: 20px!important;
 }
+
+.discourse-no-touch .btn:hover, .discourse-no-touch .btn.btn-hover{
+  background-color: var(--secondary)!important;
+}
+
+.search-menu .results .search-result-user .user-result .user-titles .username, .search-menu .results .search-result-user .user-result .user-titles .name, .search-menu .results .search-result-user .user-result .user-titles .custom-field{
+  color: var(--primary)!important;
+}
