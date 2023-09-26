@@ -1180,3 +1180,11 @@ padding: 20px!important;
 .search-menu .results .search-result-user .user-result .user-titles .username, .search-menu .results .search-result-user .user-result .user-titles .name, .search-menu .results .search-result-user .user-result .user-titles .custom-field{
   color: var(--primary)!important;
 }
+
+.search-link .blurb{
+  color: var(--primary)!important;
+}
+
+.search-link .blurb .search-highlight{
+  color: var(--tertiary)!important;
+}
