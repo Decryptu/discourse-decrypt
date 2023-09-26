@@ -1204,3 +1204,7 @@ padding: 20px!important;
 .admin-contents table tr:hover{
   background: var(--secondary);
 }
+
+.dashboard .navigation .navigation-item:hover, .dashboard-next .navigation .navigation-item:hover{
+  background: var(--secondary);
+}
