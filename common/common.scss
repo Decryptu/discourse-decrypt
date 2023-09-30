@@ -1208,3 +1208,7 @@ padding: 20px!important;
 .dashboard .navigation .navigation-item:hover, .dashboard-next .navigation .navigation-item:hover{
   background: var(--secondary);
 }
+
+.popup-menu .btn:focus, .popup-menu .btn:hover {
+  background: var(--secondary)!important;
+}
