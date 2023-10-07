@@ -1216,3 +1216,7 @@ padding: 20px!important;
 .regular.contents a {
   color: var(--quaternary)!important;
 }
+
+.regular.contents a:hover {
+  text-decoration: underline;
+}
