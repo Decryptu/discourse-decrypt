@@ -1220,3 +1220,10 @@ padding: 20px!important;
 .regular.contents a:hover {
   text-decoration: underline;
 }
+
+.topic-list .main-link .raw-topic-link>*{
+  width: 18px;
+  height: 18px;
+  vertical-align: text-top;
+  padding-top: 1px;
+}
