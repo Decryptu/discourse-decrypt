@@ -15,8 +15,8 @@ html
   #main-outlet {
   width: calc(100% - 1em);
   padding: 0.5em 0.5em 1em 0.5em;
-  background-color: #111111!important;
-  border: 1px solid #333333;
+  background-color: var(--secondary-very-high);
+  border: 1px solid var(--secondary-high);
   margin-bottom: 50px;
   border-radius: 12px;
   box-shadow: none;
@@ -204,7 +204,7 @@ html body.static-tos #main-outlet, html body.static-privacy #main-outlet, html b
 }
 
 #main-outlet-wrapper #main-outlet{
-  background-color: #111111;
+  background-color: var(--secondary-very-high);
 }
 
 /* emoji */
