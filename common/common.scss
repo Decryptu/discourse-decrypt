@@ -329,7 +329,7 @@ html body #main-outlet {
       display: flex;
       margin-bottom: 0.5em;
       background-color: var(--header_background);
-      border: 1px solid rgba(var(--tertiary));
+      border: 1px solid var(--tertiary);
       border-radius: 1em;
       position: relative;
       transition: box-shadow 100ms ease-in-out, background-color 200ms ease-in-out, border 200ms ease-in-out;
@@ -1231,4 +1231,8 @@ padding: 20px!important;
 .author.topic-list-data {
   display: flex;
   align-items: center;
+}
+
+.full-width .contents .topic-list .topic-list-header .topic-list-data.posters{
+  display: none;
 }
