@@ -343,7 +343,7 @@ html body #main-outlet {
           opacity: 0.75;
         }
         &:hover {
-          border: 1px solid var(--primary);
+          border: 1px solid var(--primary-very-low);
           .discourse-tag {
             opacity: 1;
           }
