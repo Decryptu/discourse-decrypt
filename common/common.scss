@@ -1272,6 +1272,10 @@ padding: 20px!important;
 }
 
 .discourse-no-touch .autocomplete ul li a:hover, .discourse-no-touch .autocomplete ul li a.btn-hover{
-  background-color: var(--secondary-very-low)
+  background-color: var(--secondary-low)
 
+}
+
+a.mention, a.mention-group{
+  background: var(--secondary-low);
 }
