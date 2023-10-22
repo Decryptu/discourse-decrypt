@@ -1240,3 +1240,13 @@ padding: 20px!important;
 .chat-channel-card{
   background-color: var(--secondary);
 }
+
+.search-container .search-header{
+  background: var(--secondary);
+  border-radius: 8px;
+  border: 1px solid var(--primary);
+}
+
+.search-container .search-filters{
+  background: var(--secondary);
+}
