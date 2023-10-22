@@ -1262,3 +1262,7 @@ padding: 20px!important;
 .select-kit .select-kit-row.is-selected.is-highlighted{
   background: var(--secondary-high)!important;
 }
+
+.select-kit .select-kit-row.is-highlighted{
+  background-color: var(--secondary-low) !important;
+}
