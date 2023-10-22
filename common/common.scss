@@ -1266,3 +1266,12 @@ padding: 20px!important;
 .select-kit .select-kit-row.is-highlighted{
   background-color: var(--secondary-low) !important;
 }
+
+.autocomplete ul li a.selected{
+  background-color: var(--secondary-low)
+}
+
+.discourse-no-touch .autocomplete ul li a:hover, .discourse-no-touch .autocomplete ul li a.btn-hover{
+  background-color: var(--secondary-very-low)
+
+}
