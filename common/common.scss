@@ -1284,6 +1284,10 @@ a.mention, a.mention-group{
   background: var(--secondary-low);
 }
 
+.user-menu.revamped .quick-access-panel li.unread, .user-menu.revamped .quick-access-panel li.pending{
+  margin-bottom: 5px;
+}
+
 .badge-notification.clicks{
   color: var(--tertiary);
 }
