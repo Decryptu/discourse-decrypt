@@ -1307,3 +1307,8 @@ a.mention, a.mention-group{
 .sidebar-section-wrapper.sidebar-section[data-section-name="messages"] {
   order: 5!important; 
 }
+
+.sidebar-wrapper .sidebar-sections {
+  display: flex !important;
+  flex-direction: column;
+}
