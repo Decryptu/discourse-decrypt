@@ -626,15 +626,12 @@ html body #main-outlet {
 }
 
 .discourse-no-touch .btn:hover, .discourse-no-touch .btn.btn-hover {
-  background: var(--primary-low)!important;
+  background-color: var(--primary-low)!important;
+  color: var(--primary-very-high);
 }
 
 .discourse-no-touch .btn:hover .d-icon, .discourse-no-touch .btn.btn-hover .d-icon{
   color: var(--primary-very-high)!important;
-}
-
-.discourse-no-touch .btn:hover, .discourse-no-touch .btn.btn-hover{
-  color: var(--primary-very-high);
 }
 
 .btn-primary .d-icon, .admin-wizards-custom-fields .btn.save:enabled .d-icon{
@@ -1171,10 +1168,6 @@ nav.post-controls .actions button.create .d-icon{
 
 .user-content{
 padding: 20px!important;
-}
-
-.discourse-no-touch .btn:hover, .discourse-no-touch .btn.btn-hover{
-  background-color: var(--secondary)!important;
 }
 
 .search-menu .results .search-result-user .user-result .user-titles .username, .search-menu .results .search-result-user .user-result .user-titles .name, .search-menu .results .search-result-user .user-result .user-titles .custom-field{
