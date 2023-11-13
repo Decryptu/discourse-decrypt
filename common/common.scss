@@ -1113,7 +1113,7 @@ nav.post-controls .actions button.create{
 }
 
 .discourse-no-touch .btn-flat:hover, .discourse-no-touch .btn-flat.btn-hover{
-  color: var(--secondary)!important;
+  color: var(--primary)!important;
 }
 
 .discourse-no-touch .btn-flat:hover .d-icon{
@@ -1286,4 +1286,8 @@ a.mention, a.mention-group{
 
 .badge-notification.clicks{
   color: var(--tertiary);
+}
+
+.discourse-no-touch .sidebar-section-wrapper .sidebar-section-header-wrapper .btn.dropdown-select-box-header:hover, .discourse-no-touch .sidebar-section-wrapper .sidebar-section-header-wrapper .sidebar-section-header-button:hover{
+  background: var(--header_background);
 }
