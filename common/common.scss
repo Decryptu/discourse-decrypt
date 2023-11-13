@@ -1291,3 +1291,19 @@ a.mention, a.mention-group{
 .discourse-no-touch .sidebar-section-wrapper .sidebar-section-header-wrapper .btn.dropdown-select-box-header:hover, .discourse-no-touch .sidebar-section-wrapper .sidebar-section-header-wrapper .sidebar-section-header-button:hover{
   background: var(--header_background);
 }
+
+.sidebar-section-wrapper.sidebar-section[data-section-name="chat-channels"] {
+  order: 1; 
+}
+.sidebar-section-wrapper.sidebar-section[data-section-name="categories"] {
+  order: 2; 
+}
+.sidebar-section-wrapper.sidebar-section[data-section-name="tags"] {
+  order: 3; 
+}
+.sidebar-section-wrapper.sidebar-section[data-section-name="chat-dms"] {
+  order: 4; 
+}
+.sidebar-section-wrapper.sidebar-section[data-section-name="messages"] {
+  order: 5; 
+}
