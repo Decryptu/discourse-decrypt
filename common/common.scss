@@ -1313,3 +1313,7 @@ a.mention, a.mention-group{
 .topic-body .reply-to-tab{
   color: var(--primary)!important;
 }
+
+.user-menu.revamped .quick-access-panel .item-label:hover {
+  color: var(--secondary)!important;
+}
