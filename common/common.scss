@@ -892,6 +892,7 @@ tbody{
 
 .user-menu.revamped .quick-access-panel li:hover{
   border-radius: 5px;
+  background-color: var(--primary-low)!important;
 }
 
 .user-menu.revamped #quick-access-profile li{
@@ -1312,8 +1313,4 @@ a.mention, a.mention-group{
 
 .topic-body .reply-to-tab{
   color: var(--primary)!important;
-}
-
-.user-menu.revamped .quick-access-panel .item-label:hover {
-  color: var(--secondary)!important;
 }
