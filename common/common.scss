@@ -1309,3 +1309,7 @@ a.mention, a.mention-group{
   display: flex !important;
   flex-direction: column;
 }
+
+.topic-body .reply-to-tab{
+  color: var(--primary)!important;
+}
