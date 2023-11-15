@@ -1318,3 +1318,11 @@ a.mention, a.mention-group{
 .chat-enabled .sidebar-section-link--active{
   background: var(--secondary-low)!important;
 }
+
+.chat-drawer-header__top-line{
+  gap: 5px;
+}
+
+.chat-scroll-to-bottom__arrow{
+  background: var(--secondary-low);
+}
