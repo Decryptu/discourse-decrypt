@@ -1334,3 +1334,7 @@ a.chat-drawer-header__title:hover .chat-drawer-header__top-line{
 .discourse-no-touch .d-header-icons .icon:hover, .discourse-no-touch .d-header-icons .icon:focus{
   background-color: var(--secondary-low);
 }
+
+.btn-flat .d-icon{
+  color: var(--primary);
+}
