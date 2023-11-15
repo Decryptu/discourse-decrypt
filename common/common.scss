@@ -1326,3 +1326,7 @@ a.mention, a.mention-group{
 .chat-scroll-to-bottom__arrow{
   background: var(--secondary-low);
 }
+
+a.chat-drawer-header__title:hover .chat-drawer-header__top-line{
+  background: var(--secondary-low);
+}
