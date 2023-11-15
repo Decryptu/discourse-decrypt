@@ -727,7 +727,7 @@ tbody{
 }
 
 .sidebar-section-link-wrapper .sidebar-section-link:focus, .sidebar-section-link-wrapper .sidebar-section-link:hover{
-  background: var(--primary-very-high)14;
+  background: var(--secondary-high);
 }
 
 .sidebar-more-section-links-details:focus-within, .sidebar-more-section-links-details:hover{
@@ -1313,4 +1313,8 @@ a.mention, a.mention-group{
 
 .topic-body .reply-to-tab{
   color: var(--primary)!important;
+}
+
+.chat-enabled .sidebar-section-link--active{
+  background: var(--secondary-low)!important;
 }
