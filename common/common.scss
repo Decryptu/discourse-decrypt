@@ -1338,3 +1338,36 @@ a.chat-drawer-header__title:hover .chat-drawer-header__top-line{
 .btn-flat .d-icon{
   color: var(--primary);
 }
+
+#sidebar-section-content-chat-channels {
+  display: flex;
+  flex-direction: column;
+}
+
+#sidebar-section-content-chat-channels > .sidebar-section-link-wrapper[data-list-item-name="chat-crypto"] {
+  order: 1;
+}
+
+#sidebar-section-content-chat-channels > .sidebar-section-link-wrapper[data-list-item-name="debutant"] {
+  order: 2;
+}
+
+#sidebar-section-content-chat-channels > .sidebar-section-link-wrapper[data-list-item-name="analyse-technique"] {
+  order: 3;
+}
+
+#sidebar-section-content-chat-channels > .sidebar-section-link-wrapper[data-list-item-name="analyse-on-chain"] {
+  order: 4;
+}
+
+#sidebar-section-content-chat-channels > .sidebar-section-link-wrapper[data-list-item-name="chat-hors-sujet"] {
+  order: 5;
+}
+
+#sidebar-section-content-chat-channels > .sidebar-section-link-wrapper[data-list-item-name="toaster-master"] {
+  order: 6;
+}
+
+#sidebar-section-content-chat-channels > .sidebar-section-link-wrapper[data-list-item-name="team"] {
+  order: 7;
+}
