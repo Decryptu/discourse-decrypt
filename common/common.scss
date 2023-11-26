@@ -1371,3 +1371,19 @@ a.chat-drawer-header__title:hover .chat-drawer-header__top-line{
 #sidebar-section-content-chat-channels > .sidebar-section-link-wrapper[data-list-item-name="team"] {
   order: 7;
 }
+
+.post-links-container ul li a[href]{
+  color: var(--quaternary)!important;
+}
+
+.timeline-container .topic-timeline .timeline-ago{
+  color: var(--primary-medium)!important;
+}
+
+span.relative-date{
+  color: var(--primary-medium)!important;
+}
+
+.timeline-container .topic-timeline .start-date{
+  color: var(--primary-medium)!important;
+}
