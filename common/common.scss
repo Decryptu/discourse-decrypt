@@ -282,6 +282,10 @@ html body #main-outlet {
 
 // Topic List
 
+.topic-list-icons .d-icon-thumbtack, .topic-list .d-icon-thumbtack, .latest-topic-list .d-icon-thumbtack, .top-topic-list .d-icon-thumbtack{
+  color: var(--tertiary);
+}
+
 @keyframes background-fade-highlight {
   0% {
     background-color: var(--highlight-low);
