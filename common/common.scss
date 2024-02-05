@@ -286,6 +286,10 @@ html body #main-outlet {
   color: var(--tertiary);
 }
 
+.topic-list .link-bottom-line a.badge-wrapper.box, .topic-list .link-bottom-line a.discourse-tag.box{
+  display: none;
+}
+
 @keyframes background-fade-highlight {
   0% {
     background-color: var(--highlight-low);
