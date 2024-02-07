@@ -891,6 +891,10 @@ div.edit-category .edit-category-title-bar{
 .dashboard .navigation, .dashboard-next .navigation{
   border-bottom: 1px solid var(--primary-low);
 }
+
+.admin-customize .themes-list-search__input, .admin-customize .themes-list-filter{
+  background-color: var(--secondary-low);
+}
 /* user dropdown */
 
 .menu-panel.drop-down{
