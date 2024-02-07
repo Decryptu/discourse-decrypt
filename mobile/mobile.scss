@@ -229,3 +229,12 @@ img.emoji {
 .discourse-tag.box{
   padding: 2px 8px 2px 0px;
 }
+
+/* chat */
+.c-routes-direct-messages, .c-routes-channels, .c-routes-threads{
+  background: inherit;
+}
+
+.chat-channel-row__content{
+  background: var(--secondary-low);
+}

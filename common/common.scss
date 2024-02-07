@@ -868,6 +868,29 @@ tbody{
   background: var(--shadow-modal);
   border-radius: 5px;
 }
+
+div.edit-category .edit-category-title-bar{
+  border-radius: 4px;
+  background-color: var(--secondary-low);
+}
+
+.user-preferences .bio-composer .d-editor-preview, .group-form-bio .d-editor-preview, .edit-category-tab-topic-template .d-editor-preview{
+  background-color: var(--secondary-low);
+  border-radius: 5px;
+  border: 1px solid var(--primary-low);
+}
+
+.uploaded-image-preview{
+  background: var(--secondary-low) center;
+}
+
+.dashboard.general .navigation-item.general .navigation-link, .dashboard-next.general .navigation-item.general .navigation-link{
+  border-bottom: 0.2em solid var(--tertiary);
+}
+
+.dashboard .navigation, .dashboard-next .navigation{
+  border-bottom: 1px solid var(--primary-low);
+}
 /* user dropdown */
 
 .menu-panel.drop-down{
