@@ -1083,6 +1083,7 @@ input[type="text"], input[type="password"], input[type="datetime"], input[type="
 
 .chat-message .chat-message-text .mention {
   color: var(--secondary)!important;
+  background: var(--tertiary)!important;
 }
 
 .chat-drawer-container .chat-message .onebox{
