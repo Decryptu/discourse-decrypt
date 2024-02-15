@@ -1077,8 +1077,8 @@ input[type="text"], input[type="password"], input[type="datetime"], input[type="
   color: var(--primary-medium)!important;
 }
 
-.c-navbar__actions button {
-  margin-top: 10px!important;
+.c-navbar__actions button, .c-navbar .c-navbar__back-button {
+  margin-top: 4px!important;
 }
 
 /* dernière visite */
