@@ -1077,6 +1077,10 @@ input[type="text"], input[type="password"], input[type="datetime"], input[type="
   color: var(--primary-medium)!important;
 }
 
+.c-navbar button {
+  padding-top: 10px!important;
+}
+
 /* dernière visite */
 
 .topic-list .topic-list-item-separator .topic-list-data span{
