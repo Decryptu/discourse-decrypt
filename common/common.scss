@@ -1081,6 +1081,10 @@ input[type="text"], input[type="password"], input[type="datetime"], input[type="
   margin: 4px!important;
 }
 
+.chat-message .chat-message-text .mention {
+  color: var(--secondary)!important;
+}
+
 /* dernière visite */
 
 .topic-list .topic-list-item-separator .topic-list-data span{
