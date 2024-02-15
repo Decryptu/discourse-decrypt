@@ -1073,6 +1073,10 @@ input[type="text"], input[type="password"], input[type="datetime"], input[type="
   margin-right: 5px;
 }
 
+.chat-message-container.-user-info-hidden .chat-time {
+  color: var(--primary-medium)!important;
+}
+
 /* dernière visite */
 
 .topic-list .topic-list-item-separator .topic-list-data span{
