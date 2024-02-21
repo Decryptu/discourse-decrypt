@@ -1122,6 +1122,11 @@ input[type="text"], input[type="password"], input[type="datetime"], input[type="
 
 /* chat bottom */
 
+.chat-drawer .chat-drawer-container{
+  border-top-left-radius: 5px!important;
+  border-top-right-radius: 5px!important;
+}
+
 .discourse-no-touch .channels-list .chat-channel-row:hover, .channels-list .chat-channel-row.active{
   border-radius: 5px;
 }
