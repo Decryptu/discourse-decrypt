@@ -1234,6 +1234,10 @@ nav.post-controls .actions button.create{
   color: var(--primary)!important;
 }
 
+.user-menu .quick-access-panel li:hover, .user-notifications-list li:hover{
+  background-color: var(--secondary-high);
+}
+
 .user-menu.revamped .tabs-list .btn.active{
   background-color: var(--secondary-high);
 }
