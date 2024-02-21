@@ -715,6 +715,11 @@ tbody{
   color: var(--tertiary-med-or-tertiary);
 }
 
+.topic-post article.boxed:hover{
+  background-color: var(--secondary-low);
+  border-radius: .5rem;
+}
+
 /* home filter */
 
 .nav-pills>li>a:hover, .nav-pills>li button:hover{
