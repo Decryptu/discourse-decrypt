@@ -694,6 +694,48 @@ tbody{
   border-top: 1px solid var(--primary-very-high)36;
 }
 
+.topic-body{
+  border-top: 1px solid var(--primary-low);
+}
+
+.posts-filtered-notice{
+  background-color: var(--tertiary-med-or-tertiary);
+  border-radius: 0.5rem;
+}
+
+.filtered-replies-viewing{
+  color: var(--secondary);
+}
+
+.extra-info-wrapper .topic-header-extra .discourse-tags .discourse-tag{
+  margin-left: 4px;
+}
+
+.post-notice{
+  color: var(--tertiary-med-or-tertiary)!important;
+  background-color: var(--secondary-low)!important;
+}
+
+.post-notice.old .d-icon, .post-notice p, .post-notice .d-icon{
+  color: var(--tertiary-med-or-tertiary);
+}
+
+.topic-post article.boxed:hover{
+  background-color: var(--secondary-low);
+}
+
+.user-title--toasteur-fondateur{
+  color: var(--tertiary-med-or-tertiary)!important;
+}
+
+.user-title--toasteur-master a, .user-title--toasteurs-master a{
+ color: var(--pavilion-warning)!important;
+}
+
+.user-title--toasteur a, .user-title--toasteur a{
+  color: var(--primary-300)!important;
+}
+
 /* home filter */
 
 .nav-pills>li>a:hover, .nav-pills>li button:hover{
@@ -725,7 +767,7 @@ tbody{
 }
 
 .sidebar-wrapper .sidebar-container{
-  border: 1px solid var(--quaternary-low);
+  border: 1px solid var(--secondary-high);
   border-radius: 15px;
 }
 
@@ -1136,19 +1178,19 @@ img.emoji.only-emoji{
 /* username */
 
 .names span a{
-  color: var(--primary)!important;
+  color: var(--primary);
 }
 
 .topic-meta-data .post-info a{
-  color: var(--primary-medium)!important;
+  color: var(--primary-medium);
 }
 
 .post-info.edits .widget-button{
-  color: var(--primary-medium)!important;
+  color: var(--primary-medium);
 }
 
 nav.post-controls .actions button.create{
-  color: var(--primary-medium)!important;
+  color: var(--primary-medium);
 }
 
 .topic-map h4.names span a{
