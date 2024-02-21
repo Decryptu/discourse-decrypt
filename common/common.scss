@@ -1134,6 +1134,7 @@ input[type="text"], input[type="password"], input[type="datetime"], input[type="
 
 .discourse-no-touch .channels-list .chat-channel-row:hover, .channels-list .chat-channel-row.active{
   border-radius: 5px;
+  background-color: var(--secondary-low);
 }
 
 .channels-list .chat-channel-row.can-leave:hover .toggle-channel-membership-button.-leave{
