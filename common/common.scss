@@ -698,6 +698,15 @@ tbody{
   border-top: 1px solid var(--primary-low);
 }
 
+.posts-filtered-notice{
+  background-color: var(--tertiary-med-or-tertiary);
+  border-radius: 0.5rem;
+}
+
+.filtered-replies-viewing{
+  color: var(primary);
+}
+
 /* home filter */
 
 .nav-pills>li>a:hover, .nav-pills>li button:hover{
