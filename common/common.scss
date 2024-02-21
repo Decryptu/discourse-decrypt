@@ -724,7 +724,7 @@ tbody{
   background-color: var(--secondary-low);
 }
 
-.user-title--toasteur-fondateur, .user-title--toasteur-master a, .user-title--toasteurs-master a{
+.user-title--toasteur-fondateur{
  color: var(--pavilion-warning)!important;
 }
 
@@ -732,11 +732,11 @@ tbody{
   color: var(--primary-300)!important;
 }
 
-.d-icon-shield-alt, .user-title--cryptoast-media a{
+.user-title--toasteur-master a, .user-title--toasteurs-master a{
   color: var(--category-12-color)!important;
 }
 
-.user-title--team-cryptoast-research a{
+.user-title--team-cryptoast-research a, .d-icon-shield-alt, .user-title--cryptoast-media a{
   color: var(--tertiary-med-or-tertiary)!important;
 }
 
