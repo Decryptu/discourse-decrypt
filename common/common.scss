@@ -712,8 +712,8 @@ tbody{
 }
 
 .post-notice .new-user{
-  color: var(--tertiary-med-or-tertiary);
-  background-color: var(--secondary-low);
+  color: var(--tertiary-med-or-tertiary)!important;
+  background-color: var(--secondary-low)!important;
 }
 
 .post-notice.old .d-icon, .post-notice p{
