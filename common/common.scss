@@ -711,6 +711,11 @@ tbody{
   margin-left: 4px;
 }
 
+.post-notice .new-user{
+  color: var(--tertiary-med-or-tertiary);
+  background-color: var(--secondary-low);
+}
+
 .post-notice.old .d-icon, .post-notice p{
   color: var(--tertiary-med-or-tertiary);
 }
