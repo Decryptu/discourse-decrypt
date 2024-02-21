@@ -1234,6 +1234,10 @@ nav.post-controls .actions button.create{
   color: var(--primary)!important;
 }
 
+.user-menu.revamped .tabs-list .btn.active{
+  background-color: var(--secondary-high);
+}
+
 .discourse-no-touch .btn-flat:hover .d-icon{
   color: var(--secondary)!important;
 }
