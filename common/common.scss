@@ -711,6 +711,10 @@ tbody{
   margin-left: 4px;
 }
 
+.post-notice.old .d-icon, .post-notice p{
+  color: var(--tertiary-med-or-tertiary);
+}
+
 /* home filter */
 
 .nav-pills>li>a:hover, .nav-pills>li button:hover{
