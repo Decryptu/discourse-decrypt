@@ -694,7 +694,7 @@ tbody{
   border-top: 1px solid var(--primary-very-high)36;
 }
 
-.topic-post article.boxed{
+.topic-post-visited+.topic-post .topic-avatar, .topic-post-visited+.topic-post .topic-body{
   border-top: 1px solid var(--primary-low);
 }
 
@@ -705,6 +705,10 @@ tbody{
 
 .filtered-replies-viewing{
   color: var(--secondary);
+}
+
+.extra-info-wrapper .topic-header-extra .discourse-tags .discourse-tag{
+  margin-left: 4px;
 }
 
 /* home filter */
