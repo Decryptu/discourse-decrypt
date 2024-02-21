@@ -1128,6 +1128,10 @@ input[type="text"], input[type="password"], input[type="datetime"], input[type="
   border: 1px solid var(--secondary-high)!important;
 }
 
+.chat-composer__inner-container{
+  border-radius: 5px!important;
+}
+
 .c-navbar-container{
   border-bottom: 1px solid var(--secondary-high)!important;
 }
