@@ -823,6 +823,14 @@ div.poll{
 
 /* admin menu */
 
+.admin-controls .nav-pills>li a.active{
+  background: var(--quaternary);
+}
+
+.admin-customize .themes-list-container__item:not(.inactive-indicator):not(.selected):hover{
+  background-color: var(--secondary-low);
+}
+
 .boxed.white{
   background-color: transparent;
 }
