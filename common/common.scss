@@ -723,6 +723,10 @@ tbody{
   color: var(--tertiary-med-or-tertiary)!important;
 }
 
+.user-title--toasteur-master, .user-title--toasteurs-master{
+ color: var(--pavilion-warning)!important;
+}
+
 /* home filter */
 
 .nav-pills>li>a:hover, .nav-pills>li button:hover{
