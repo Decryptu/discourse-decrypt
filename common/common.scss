@@ -711,12 +711,16 @@ tbody{
   margin-left: 4px;
 }
 
-.post-notice.old .d-icon, .post-notice p, .user-title--toasteur-fondateur{
+.post-notice.old .d-icon, .post-notice p{
   color: var(--tertiary-med-or-tertiary);
 }
 
 .topic-post article.boxed:hover{
   background-color: var(--secondary-low);
+}
+
+.user-title--toasteur-fondateur{
+  color: var(--tertiary-med-or-tertiary)!important;
 }
 
 /* home filter */
