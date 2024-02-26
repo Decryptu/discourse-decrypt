@@ -1036,6 +1036,10 @@ div.edit-category .edit-category-title-bar{
 }
 
 /* home */
+
+.alert.alert-info.clickable{
+  display: none;
+}
 .navigation-categories .navigation-container, .categories-list .navigation-container{
   border-bottom: 1px solid var(--secondary-high);
 }
