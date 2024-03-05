@@ -1534,12 +1534,16 @@ a.chat-drawer-header__title:hover .chat-drawer-header__top-line{
   order: 5;
 }
 
-#sidebar-section-content-chat-channels > .sidebar-section-link-wrapper[data-list-item-name="toaster-master"] {
+#sidebar-section-content-chat-channels > .sidebar-section-link-wrapper[data-list-item-name="high-risk"] {
   order: 6;
 }
 
-#sidebar-section-content-chat-channels > .sidebar-section-link-wrapper[data-list-item-name="team"] {
+#sidebar-section-content-chat-channels > .sidebar-section-link-wrapper[data-list-item-name="toaster-master"] {
   order: 7;
+}
+
+#sidebar-section-content-chat-channels > .sidebar-section-link-wrapper[data-list-item-name="team"] {
+  order: 8;
 }
 
 .post-links-container ul li a[href]{
