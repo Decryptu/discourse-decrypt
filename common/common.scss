@@ -1150,6 +1150,10 @@ span.chat-message-info__username.is-username.is-staff.is-moderator.group--Crypto
   color: var(--tertiary-med-or-tertiary)!important;
 }
 
+span.chat-message-info__username.is-username.is-staff.is-admin.group--Cryptoast-Media.clickable .chat-message-info__username__name {
+  color: var(--tertiary-med-or-tertiary)!important;
+}
+
 .chat-drawer .chat-drawer-container{
   border-top-left-radius: 5px!important;
   border-top-right-radius: 5px!important;
