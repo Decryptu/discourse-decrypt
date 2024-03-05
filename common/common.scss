@@ -1138,6 +1138,14 @@ span.chat-message-info__username.is-username.is-staff.is-moderator.group--Team-C
   color: var(--tertiary-med-or-tertiary)!important;
 }
 
+span.chat-message-info__username.is-username.is-staff.is-moderator.group--Toasteur.clickable .chat-message-info__username__name {
+  color: var(--tertiary-med-or-tertiary)!important;
+}
+
+span.chat-message-info__username.is-username.is-staff.is-admin.is-moderator.group--Cryptoast-Media.clickable .chat-message-info__username__name {
+  color: var(--tertiary-med-or-tertiary)!important;
+}
+
 .chat-drawer .chat-drawer-container{
   border-top-left-radius: 5px!important;
   border-top-right-radius: 5px!important;
