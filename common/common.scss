@@ -1126,32 +1126,23 @@ input[type="text"], input[type="password"], input[type="datetime"], input[type="
 
 /* chat bottom */
 
-.chat-message-info__username__name{
+/* Default color for all chat messages */
+.chat-message-info__username__name {
   color: var(--primary);
 }
 
-span.chat-message-info__username.is-username.is-staff.is-admin.is-moderator.group--Team-Cryptoast-Research.clickable .chat-message-info__username__name {
-  color: var(--tertiary-med-or-tertiary)!important;
+/* Enhanced specificity for targeted groups without using !important */
+span.chat-message-info__username.is-username.is-staff.group--Team-Cryptoast-Research.clickable .chat-message-info__username__name,
+span.chat-message-info__username.is-username.is-staff.group--Toasteur.clickable .chat-message-info__username__name,
+span.chat-message-info__username.is-username.is-staff.group--Cryptoast-Media.clickable .chat-message-info__username__name {
+  color: var(--tertiary-med-or-tertiary);
 }
 
-span.chat-message-info__username.is-username.is-staff.is-moderator.group--Team-Cryptoast-Research.clickable .chat-message-info__username__name {
-  color: var(--tertiary-med-or-tertiary)!important;
-}
-
-span.chat-message-info__username.is-username.is-staff.is-moderator.group--Toasteur.clickable .chat-message-info__username__name {
-  color: var(--tertiary-med-or-tertiary)!important;
-}
-
+/* Additional specificity for roles within groups */
+span.chat-message-info__username.is-username.is-staff.is-admin.group--Cryptoast-Media.clickable .chat-message-info__username__name,
+span.chat-message-info__username.is-username.is-staff.is-moderator.group--Cryptoast-Media.clickable .chat-message-info__username__name,
 span.chat-message-info__username.is-username.is-staff.is-admin.is-moderator.group--Cryptoast-Media.clickable .chat-message-info__username__name {
-  color: var(--tertiary-med-or-tertiary)!important;
-}
-
-span.chat-message-info__username.is-username.is-staff.is-moderator.group--Cryptoast-Media.clickable .chat-message-info__username__name {
-  color: var(--tertiary-med-or-tertiary)!important;
-}
-
-span.chat-message-info__username.is-username.is-staff.is-admin.group--Cryptoast-Media.clickable .chat-message-info__username__name {
-  color: var(--tertiary-med-or-tertiary)!important;
+  color: var(--tertiary-med-or-tertiary);
 }
 
 .chat-drawer .chat-drawer-container{
