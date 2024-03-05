@@ -1126,6 +1126,10 @@ input[type="text"], input[type="password"], input[type="datetime"], input[type="
 
 /* chat bottom */
 
+.user-title--team-cryptoast-research > .chat-message-info__username__name {
+  color: var(--tertiary-med-or-tertiary);
+}
+
 .chat-drawer .chat-drawer-container{
   border-top-left-radius: 5px!important;
   border-top-right-radius: 5px!important;
