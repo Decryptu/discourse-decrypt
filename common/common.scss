@@ -869,7 +869,7 @@ div.poll{
   background-color: transparent;
 }
 
-.new-user-wrapper .user-navigation .nav-pills li a.active{
+.new-user-wrapper .user-navigation .nav-pills li a.active, .new-user-wrapper .user-navigation .nav-pills li a:hover, .new-user-wrapper .user-navigation .nav-pills li a:focus{
   color: var(--tertiary);
   background: transparent;
   border-bottom: var(--user-navigation__border-width) solid var(--tertiary);
