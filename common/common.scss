@@ -880,6 +880,10 @@ div.poll{
   border-radius: 0px 0px 5px 5px;
 }
 
+.admin-customize .themes-list-container__item.inactive-theme{
+  background: var(--primary-50);
+}
+
 .admin-customize .themes-list-header .tab.active{
   color: var(--primary-very-high);
   background-color: var(--primary-low)!important;
