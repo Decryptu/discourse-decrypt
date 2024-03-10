@@ -1086,6 +1086,9 @@ input[type="text"], input[type="password"], input[type="datetime"], input[type="
 
 .nav-pills>li a.active, .nav-pills>li button.active{
   border-radius: 5px;
+  color: var(--primary);
+  background-color: #9390f120;
+  border: 1px solid var(--tertiary);
 }
 
 .nav-pills>li>a:hover, .nav-pills>li button:hover{
