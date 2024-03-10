@@ -869,6 +869,12 @@ div.poll{
   background-color: transparent;
 }
 
+.new-user-wrapper .user-navigation .nav-pills li a.active{
+  color: var(--tertiary);
+  background: transparent;
+  border-bottom: var(--user-navigation__border-width) solid var(--tertiary);
+}
+
 .admin-customize .themes-list-container{
   background-color: var(--quaternary-low);
   border-radius: 0px 0px 5px 5px;
