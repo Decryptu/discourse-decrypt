@@ -282,6 +282,10 @@ html body #main-outlet {
 
 // Topic List
 
+nav.post-controls .show-replies:hover, nav.post-controls .show-replies:focus{
+  background: var(--primary-low-mid);
+}
+
 .topic-list-icons .d-icon-thumbtack, .topic-list .d-icon-thumbtack, .latest-topic-list .d-icon-thumbtack, .top-topic-list .d-icon-thumbtack{
   color: var(--tertiary);
 }
