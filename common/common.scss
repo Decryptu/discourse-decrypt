@@ -827,10 +827,6 @@ div.poll{
 
 /* admin menu */
 
-.admin-controls .nav-pills>li a.active{
-  background: var(--quaternary);
-}
-
 .admin-customize .themes-list-container__item:not(.inactive-indicator):not(.selected):hover{
   background-color: var(--secondary-low);
 }
@@ -1084,6 +1080,10 @@ input[type="text"], input[type="password"], input[type="datetime"], input[type="
   border-radius: 10px;
 }
 
+.admin-controls .nav-pills>li a.active{
+  background: #9390f120;
+}
+
 .nav-pills>li a.active, .nav-pills>li button.active{
   border-radius: 5px;
   color: var(--primary);
@@ -1093,6 +1093,9 @@ input[type="text"], input[type="password"], input[type="datetime"], input[type="
 
 .nav-pills>li>a:hover, .nav-pills>li button:hover{
   border-radius: 5px;
+  color: var(--primary);
+  background-color: #9390f150;
+  border: 1px solid var(--tertiary);
 }
 
 .user-content-wrapper .user-content{
