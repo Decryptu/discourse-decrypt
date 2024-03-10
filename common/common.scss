@@ -754,10 +754,6 @@ div.poll{
 
 /* home filter */
 
-.nav-pills>li>a:hover, .nav-pills>li button:hover{
-  background-color: var(--highlight-bg);
-}
-
 .list-controls .combo-box .combo-box-header{
   color: var(--primary-very-high);
   background: var(--secondary-very-high);
@@ -1080,21 +1076,14 @@ input[type="text"], input[type="password"], input[type="datetime"], input[type="
   border-radius: 10px;
 }
 
-.admin-controls .nav-pills>li a.active{
-  background: #9390f120;
+.nav-pills>li>a:hover, .nav-pills>li button:hover{
+  background: #9390f150;
 }
 
-.nav-pills>li a.active, .nav-pills>li button.active{
+.nav-pills>li a.active, .nav-pills>li button.active, .admin-controls .nav-pills>li a.active{
   border-radius: 5px;
   color: var(--primary);
   background-color: #9390f120;
-  border: 1px solid var(--tertiary);
-}
-
-.nav-pills>li>a:hover, .nav-pills>li button:hover{
-  border-radius: 5px;
-  color: var(--primary);
-  background-color: #9390f150;
   border: 1px solid var(--tertiary);
 }
 
@@ -1336,11 +1325,6 @@ nav.post-controls .actions button.create .d-icon{
 
 .user-info .user-detail .name a, .user-info .user-detail .username a{
   color: var(--primary)!important;
-}
-
-.nav-pills>li>a:hover, .nav-pills>li button:hover{
-  color: var(--primary)!important;
-  background-color: #7caae6be!important;
 }
 
 .user-content{
