@@ -876,7 +876,7 @@ div.poll{
 
 .admin-customize .themes-list-header .tab.active{
   color: var(--primary-very-high);
-  background-color: var(--quaternary)!important;
+  background-color: var(--primary-low)!important;
   border-radius: 5px 5px 0px 0px!important;
 }
 
@@ -1078,6 +1078,8 @@ input[type="text"], input[type="password"], input[type="datetime"], input[type="
 
 .nav-pills>li>a:hover, .nav-pills>li button:hover{
   background: #9390f150;
+  border: 1px solid var(--tertiary);
+  color: var(--primary);
 }
 
 .nav-pills>li a.active, .nav-pills>li button.active, .admin-controls .nav-pills>li a.active{
