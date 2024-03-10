@@ -280,6 +280,10 @@ html body #main-outlet {
   border-radius: 0.5em;
 }
 
+.user-menu .quick-access-panel li:focus-within, .user-notifications-list li:focus-within{
+  background: var(--d-input-bg-color--disabled);
+}
+
 // Topic List
 
 .topic-list-icons .d-icon-thumbtack, .topic-list .d-icon-thumbtack, .latest-topic-list .d-icon-thumbtack, .top-topic-list .d-icon-thumbtack{
