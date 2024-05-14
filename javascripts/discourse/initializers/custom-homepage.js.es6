@@ -33,19 +33,19 @@ export default {
 
       // Function to insert custom layout
       function insertCustomLayout() {
-        const mainOutlet = document.getElementById("main-outlet");
-        if (!mainOutlet) {
-          console.error("Main outlet not found");
-          return;
-        }
-
-        if (document.getElementById("custom-homepage-container")) {
+        const existingContainer = document.getElementById(
+          "custom-homepage-container"
+        );
+        if (existingContainer) {
           console.log("Custom homepage container already present.");
           return;
         }
 
-        // Hide default categories section
-        mainOutlet.style.display = "none";
+        const mainContent = document.querySelector(".below-site-header-outlet");
+        if (!mainContent) {
+          console.error("Main content area not found");
+          return;
+        }
 
         // Create custom blocks container
         const customContainer = document.createElement("div");
@@ -53,6 +53,7 @@ export default {
         customContainer.style.display = "grid";
         customContainer.style.gridTemplateColumns = "repeat(3, 1fr)";
         customContainer.style.gridGap = "20px";
+        customContainer.style.margin = "20px";
 
         // Fetch and display content for each block
         const blockUrls = settings.custom_homepage_blocks.split(",");
@@ -80,10 +81,7 @@ export default {
         });
 
         // Insert custom container into the page
-        mainOutlet.parentNode.insertBefore(
-          customContainer,
-          mainOutlet.nextSibling
-        );
+        mainContent.insertBefore(customContainer, mainContent.firstChild);
       }
 
       // Use Ember's run loop to wait for the DOM to be fully rendered
@@ -105,8 +103,10 @@ export default {
       });
 
       // Start observing the main content area for changes
-      const mainContent = document.querySelector("#main-outlet").parentNode;
-      observer.observe(mainContent, { childList: true, subtree: true });
+      const mainContent = document.querySelector(".below-site-header-outlet");
+      if (mainContent) {
+        observer.observe(mainContent, { childList: true, subtree: true });
+      }
     });
   },
 };
