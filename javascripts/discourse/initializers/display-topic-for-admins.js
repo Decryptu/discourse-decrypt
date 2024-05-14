@@ -38,11 +38,11 @@ export default {
 
           // Hardcoded topic URLs
           const topicUrls = [
-            "https://cr.cryptoast.fr/t/crypto-update-10-05-2024-la-transition/1868",
-            "https://cr.cryptoast.fr/t/crypto-update-10-05-2024-la-transition/1868",
-            "https://cr.cryptoast.fr/t/crypto-update-10-05-2024-la-transition/1868",
-            "https://cr.cryptoast.fr/t/crypto-update-10-05-2024-la-transition/1868",
-            "https://cr.cryptoast.fr/t/crypto-update-10-05-2024-la-transition/1868",
+            "https://cr.cryptoast.fr/t/bitcoin-les-36-prochaines-heures-sont-capitales/1881",
+            "https://cr.cryptoast.fr/t/kaiko-insights-les-mineurs-de-btc-se-heurtent-a-la-realite/1880",
+            "https://cr.cryptoast.fr/t/cloture-journaliere-du-13-05-2024/1879",
+            "https://cr.cryptoast.fr/t/video-3-airdrops-faciles-sans-systeme-de-points/1877",
+            "https://cr.cryptoast.fr/t/le-recap-daily-lundi-13-mai-2024/1876",
           ];
 
           // Function to fetch and display topic content
