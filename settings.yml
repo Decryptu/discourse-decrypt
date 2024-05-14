@@ -1,0 +1,23 @@
+custom_homepage_enabled:
+  default: true
+  client: true
+
+custom_homepage_block1:
+  default: ""
+  client: true
+
+custom_homepage_block2:
+  default: ""
+  client: true
+
+custom_homepage_block3:
+  default: ""
+  client: true
+
+custom_homepage_block4:
+  default: ""
+  client: true
+
+custom_homepage_block5:
+  default: ""
+  client: true
