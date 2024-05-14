@@ -27,7 +27,7 @@ export default {
       console.log("Created topic display div.");
 
       // Append the div to the homepage (change the selector if needed)
-      const homepageContainer = document.querySelector(".top-menu");
+      const homepageContainer = document.querySelector("#main-outlet-wrapper");
       if (homepageContainer) {
         homepageContainer.appendChild(topicDiv);
         console.log("Appended topic display div to the homepage.");
@@ -45,7 +45,7 @@ export default {
         .then((response) => {
           if (!response.ok) {
             throw new Error(
-              `Network response was not ok ${response.statusText}`
+              "Network response was not ok " + response.statusText
             );
           }
           return response.json();
