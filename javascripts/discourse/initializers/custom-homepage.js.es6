@@ -8,7 +8,7 @@ export default {
       console.log("Initializing custom homepage script...");
 
       // Access site settings directly from the settings object
-      const settings = Discourse.SiteSettings;
+      const settings = window.settings;
       console.log("Settings object:", settings);
 
       if (!settings.custom_homepage_enabled) {
