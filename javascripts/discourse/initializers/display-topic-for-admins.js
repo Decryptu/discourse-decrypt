@@ -51,7 +51,7 @@ export default {
           }
 
           // Fetch and display content for each block
-          const blockUrls = settings.custom_homepage_blocks.split(',');
+          const blockUrls = settings.custom_homepage_blocks.split(",");
           blockUrls.forEach((url, index) => {
             const block = document.createElement("div");
             block.className = `custom-block custom-block-${index + 1}`;
@@ -61,25 +61,22 @@ export default {
             fetch(url)
               .then((response) => {
                 if (!response.ok) {
-                  throw new Error(`Network response was not ok ${response.statusText}`);
+                  throw new Error(
+                    `Network response was not ok ${response.statusText}`
+                  );
                 }
-                return response.json();
+                return response.text(); // Change this line to get the text content
               })
               .then((data) => {
-                const postStream = data.post_stream.posts;
-                let content = "";
-
-                // Use for...of loop to concatenate the posts content
-                for (const post of postStream) {
-                  content += post.cooked;
-                }
-
                 // Insert the content into the block
-                block.innerHTML = content;
+                block.innerHTML = data;
                 console.log(`Inserted content into block ${index + 1}`);
               })
               .catch((error) => {
-                console.error(`Error fetching content for block ${index + 1}:`, error);
+                console.error(
+                  `Error fetching content for block ${index + 1}:`,
+                  error
+                );
                 block.innerHTML = "<p>Error loading content</p>";
               });
 
@@ -90,7 +87,9 @@ export default {
           const existingGrid = document.querySelector("#custom-homepage-grid");
           if (existingGrid) {
             existingGrid.remove();
-            console.log("Removed custom homepage grid as it is not the homepage.");
+            console.log(
+              "Removed custom homepage grid as it is not the homepage."
+            );
           }
         }
       };
