@@ -31,19 +31,16 @@ export default {
         settings.custom_homepage_blocks
       );
 
-      // Ensure this script only runs once
-      let customLayoutInserted = false;
-
       // Function to insert custom layout
       function insertCustomLayout() {
-        if (customLayoutInserted) {
-          console.log("Custom layout already inserted.");
-          return;
-        }
-
         const mainOutlet = document.getElementById("main-outlet");
         if (!mainOutlet) {
           console.error("Main outlet not found");
+          return;
+        }
+
+        if (document.getElementById("custom-homepage-container")) {
+          console.log("Custom homepage container already present.");
           return;
         }
 
@@ -87,8 +84,6 @@ export default {
           customContainer,
           mainOutlet.nextSibling
         );
-
-        customLayoutInserted = true;
       }
 
       // Use Ember's run loop to wait for the DOM to be fully rendered
@@ -104,7 +99,7 @@ export default {
         mutations.forEach((mutation) => {
           if (!document.getElementById("custom-homepage-container")) {
             console.log("Custom homepage container not found, reinserting...");
-            insertCustomLayout();
+            scheduleOnce("afterRender", this, insertCustomLayout);
           }
         });
       });
