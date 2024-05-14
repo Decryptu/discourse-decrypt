@@ -1,3 +1,5 @@
+// javascripts/discourse/initializers/display-topic-for-admins.js
+
 import { withPluginApi } from "discourse/lib/plugin-api";
 
 export default {
@@ -6,100 +8,108 @@ export default {
     withPluginApi("0.8", (api) => {
       const currentUser = api.getCurrentUser();
 
-      // Log current user and role
-      console.log("Current User:", currentUser);
-      if (currentUser) {
-        console.log("User Role:", currentUser.admin ? "Admin" : "Regular User");
-      }
-
-      // Check if custom homepage layout is enabled
-      const customHomepageEnabled = settings.custom_homepage_enabled;
-      if (!customHomepageEnabled) {
-        return;
-      }
-
-      // Apply custom layout only for admin users for testing
-      if (!currentUser || !currentUser.admin) {
-        return;
-      }
-
-      // Function to add the custom grid layout on the homepage
-      const addCustomGridToHomepage = () => {
+      // Function to add the grid to the homepage
+      const addGridToHomepage = () => {
         // Check if the current URL is the homepage
         if (window.location.pathname === "/") {
           // Check if the grid already exists
-          if (document.querySelector("#custom-homepage-grid")) {
-            console.log("Custom grid already exists, not adding again.");
+          if (document.querySelector("#admin-grid-display")) {
+            console.log("Grid already exists, not adding again.");
             return;
           }
 
           // Create the grid container
           const gridContainer = document.createElement("div");
-          gridContainer.id = "custom-homepage-grid";
-          console.log("Created custom homepage grid.");
+          gridContainer.id = "admin-grid-display";
+          gridContainer.className = "admin-grid";
+          console.log("Created grid display container.");
 
-          // Append the grid to the homepage
+          // Append the grid container to the homepage
           const homepageContainer = document.querySelector(
             "#ember3.discourse-root.ember-view"
           );
           if (homepageContainer) {
             homepageContainer.appendChild(gridContainer);
-            console.log("Appended custom homepage grid to the homepage.");
+            console.log("Appended grid display container to the homepage.");
           } else {
             console.log("Homepage container not found, grid not appended.");
             return;
           }
 
-          // Fetch and display content for each block
-          const blockUrls = settings.custom_homepage_blocks.split(",");
-          blockUrls.forEach((url, index) => {
-            const block = document.createElement("div");
-            block.className = `custom-block custom-block-${index + 1}`;
-            block.innerHTML = `<p>Loading content from: ${url}</p>`;
+          // Hardcoded topic URLs
+          const topicUrls = [
+            "https://cr.cryptoast.fr/t/crypto-update-10-05-2024-la-transition/1868",
+            "https://cr.cryptoast.fr/t/crypto-update-10-05-2024-la-transition/1868",
+            "https://cr.cryptoast.fr/t/crypto-update-10-05-2024-la-transition/1868",
+            "https://cr.cryptoast.fr/t/crypto-update-10-05-2024-la-transition/1868",
+            "https://cr.cryptoast.fr/t/crypto-update-10-05-2024-la-transition/1868",
+          ];
 
-            // Fetch content from the URL and insert into block
-            fetch(url)
+          // Function to fetch and display topic content
+          const fetchAndDisplayContent = (url, container) => {
+            fetch(`${url}.json`)
               .then((response) => {
                 if (!response.ok) {
                   throw new Error(
                     `Network response was not ok ${response.statusText}`
                   );
                 }
-                return response.text(); // Change this line to get the text content
+                return response.json();
               })
               .then((data) => {
-                // Insert the content into the block
-                block.innerHTML = data;
-                console.log(`Inserted content into block ${index + 1}`);
+                const postStream = data.post_stream.posts;
+                let content = "";
+
+                // Use for...of loop to concatenate the posts content
+                for (const post of postStream) {
+                  content += post.cooked;
+                }
+
+                // Insert the content into the container
+                container.innerHTML = content;
+                console.log(`Inserted content from ${url} into the container.`);
               })
               .catch((error) => {
-                console.error(
-                  `Error fetching content for block ${index + 1}:`,
-                  error
-                );
-                block.innerHTML = "<p>Error loading content</p>";
+                console.error(`Error fetching content from ${url}:`, error);
+                container.innerHTML = "<p>Error loading content</p>";
               });
+          };
 
+          // Create blocks and fetch content
+          topicUrls.forEach((url, index) => {
+            const block = document.createElement("div");
+            block.className = "admin-block";
+            block.style.maxHeight = "400px";
+            block.style.overflowY = "scroll";
+            block.style.border = "1px solid #ccc";
+            block.style.padding = "10px";
+            block.style.margin = "10px 0";
+
+            // Append the block to the grid container
             gridContainer.appendChild(block);
+            console.log(`Appended block ${index + 1} to the grid container.`);
+
+            // Fetch and display content in the block
+            fetchAndDisplayContent(url, block);
           });
         } else {
           // Remove the grid if not on the homepage
-          const existingGrid = document.querySelector("#custom-homepage-grid");
+          const existingGrid = document.querySelector("#admin-grid-display");
           if (existingGrid) {
             existingGrid.remove();
             console.log(
-              "Removed custom homepage grid as it is not the homepage."
+              "Removed grid display container as it is not the homepage."
             );
           }
         }
       };
 
       // Initial check
-      addCustomGridToHomepage();
+      addGridToHomepage();
 
       // Check on each page change
       api.onPageChange((url, title) => {
-        addCustomGridToHomepage();
+        addGridToHomepage();
       });
     });
   },

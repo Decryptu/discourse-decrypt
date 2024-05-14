@@ -1,21 +1,19 @@
-#custom-homepage-grid {
+.admin-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
-    margin: 20px 0;
+}
 
-    .custom-block {
-        max-height: 400px;
-        overflow-y: scroll;
-        border: 1px solid #ccc;
-        padding: 10px;
-    }
-
-    @media (max-width: 768px) {
+@media (max-width: 768px) {
+    .admin-grid {
         grid-template-columns: 1fr;
-
-        .custom-block {
-            max-height: 200px;
-        }
     }
+}
+
+.admin-block {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+    max-height: 400px;
+    overflow-y: scroll;
 }
