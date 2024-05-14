@@ -7,12 +7,18 @@ export default {
     withPluginApi("0.8.14", (api) => {
       console.log("Initializing custom homepage script...");
 
-      if (!api.container.lookup("site-settings:main").custom_homepage_enabled) {
+      // Log the site settings
+      const siteSettings = api.container.lookup("site-settings:main");
+      console.log("Site settings:", siteSettings);
+
+      if (!siteSettings.custom_homepage_enabled) {
         console.log("Custom homepage is not enabled.");
         return;
       }
 
       const currentUser = api.getCurrentUser();
+      console.log("Current user:", currentUser);
+
       if (!currentUser || !currentUser.admin) {
         console.log("Current user is not an admin.");
         return;
@@ -33,9 +39,8 @@ export default {
       const customHomepage = document.createElement("div");
       customHomepage.classList.add("custom-homepage");
 
-      const blocks = api.container
-        .lookup("site-settings:main")
-        .custom_homepage_blocks.split(",");
+      const blocks = siteSettings.custom_homepage_blocks.split(",");
+      console.log("Blocks to be added:", blocks);
 
       blocks.forEach((block, index) => {
         const blockElement = document.createElement("div");
