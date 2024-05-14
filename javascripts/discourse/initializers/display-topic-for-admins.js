@@ -16,57 +16,65 @@ export default {
         return;
       }
 
-      // Create the div element
-      const topicDiv = document.createElement("div");
-      topicDiv.id = "admin-topic-display";
-      topicDiv.style.maxHeight = "400px";
-      topicDiv.style.overflowY = "scroll";
-      topicDiv.style.border = "1px solid #ccc";
-      topicDiv.style.padding = "10px";
-      topicDiv.style.margin = "10px 0";
-      console.log("Created topic display div.");
+      // Log the body structure for debugging
+      console.log("Body structure:", document.body);
 
-      // Append the div to the homepage (change the selector if needed)
-      const homepageContainer = document.querySelector("#main-outlet-wrapper");
-      if (homepageContainer) {
-        homepageContainer.appendChild(topicDiv);
-        console.log("Appended topic display div to the homepage.");
-      } else {
-        console.log("Homepage container not found, div not appended.");
-        return;
-      }
+      // Wait for the DOM to be fully loaded
+      window.addEventListener("DOMContentLoaded", () => {
+        // Create the div element
+        const topicDiv = document.createElement("div");
+        topicDiv.id = "admin-topic-display";
+        topicDiv.style.maxHeight = "400px";
+        topicDiv.style.overflowY = "scroll";
+        topicDiv.style.border = "1px solid #ccc";
+        topicDiv.style.padding = "10px";
+        topicDiv.style.margin = "10px 0";
+        console.log("Created topic display div.");
 
-      // Fetch the topic content
-      const topicId = 1868; // Replace with the topic ID
-      const topicUrl = `/t/${topicId}.json`;
-      console.log("Fetching topic content from:", topicUrl);
+        // Append the div to the homepage (change the selector if needed)
+        const homepageContainer = document.querySelector(
+          "#main-outlet-wrapper"
+        );
+        if (homepageContainer) {
+          homepageContainer.appendChild(topicDiv);
+          console.log("Appended topic display div to the homepage.");
+        } else {
+          console.log("Homepage container not found, div not appended.");
+          return;
+        }
 
-      fetch(topicUrl)
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error(
-              "Network response was not ok " + response.statusText
-            );
-          }
-          return response.json();
-        })
-        .then((data) => {
-          const postStream = data.post_stream.posts;
-          let content = "";
+        // Fetch the topic content
+        const topicId = 1868; // Replace with the topic ID
+        const topicUrl = `/t/${topicId}.json`;
+        console.log("Fetching topic content from:", topicUrl);
 
-          // Concatenate the posts content
-          postStream.forEach((post) => {
-            content += post.cooked;
+        fetch(topicUrl)
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error(
+                "Network response was not ok " + response.statusText
+              );
+            }
+            return response.json();
+          })
+          .then((data) => {
+            const postStream = data.post_stream.posts;
+            let content = "";
+
+            // Concatenate the posts content
+            postStream.forEach((post) => {
+              content += post.cooked;
+            });
+
+            // Insert the content into the div
+            topicDiv.innerHTML = content;
+            console.log("Inserted topic content into the div.");
+          })
+          .catch((error) => {
+            console.error("Error fetching topic content:", error);
+            topicDiv.innerHTML = "<p>Error loading content</p>";
           });
-
-          // Insert the content into the div
-          topicDiv.innerHTML = content;
-          console.log("Inserted topic content into the div.");
-        })
-        .catch((error) => {
-          console.error("Error fetching topic content:", error);
-          topicDiv.innerHTML = "<p>Error loading content</p>";
-        });
+      });
     });
   },
 };
