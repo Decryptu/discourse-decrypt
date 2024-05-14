@@ -30,47 +30,60 @@ export default {
         settings.custom_homepage_blocks
       );
 
-      // Hide default categories section
-      document.getElementById("main-outlet").style.display = "none";
+      // Use Ember's run loop to wait for the DOM to be fully rendered
+      api.onPageChange((url, title) => {
+        console.log("Page changed:", url, title);
 
-      // Create custom blocks container
-      const customContainer = document.createElement("div");
-      customContainer.id = "custom-homepage-container";
-      customContainer.style.display = "grid";
-      customContainer.style.gridTemplateColumns = "repeat(3, 1fr)";
-      customContainer.style.gridGap = "20px";
+        // Wait for the DOM to be fully rendered
+        Ember.run.scheduleOnce("afterRender", this, () => {
+          const mainOutlet = document.getElementById("main-outlet");
+          if (!mainOutlet) {
+            console.error("Main outlet not found");
+            return;
+          }
 
-      // Fetch and display content for each block
-      const blockUrls = settings.custom_homepage_blocks.split(",");
-      blockUrls.forEach((url, index) => {
-        const block = document.createElement("div");
-        block.className = "custom-block";
-        block.innerHTML = `<p>Loading content from: ${url}</p>`;
+          // Hide default categories section
+          mainOutlet.style.display = "none";
 
-        // Fetch content from the URL and insert into block
-        fetch(url)
-          .then((response) => response.text())
-          .then((data) => {
-            block.innerHTML = data;
-            console.log(`Content loaded for block ${index + 1}`);
-          })
-          .catch((error) => {
-            block.innerHTML = `<p>Error loading content from: ${url}</p>`;
-            console.error(
-              `Error loading content for block ${index + 1}:`,
-              error
-            );
+          // Create custom blocks container
+          const customContainer = document.createElement("div");
+          customContainer.id = "custom-homepage-container";
+          customContainer.style.display = "grid";
+          customContainer.style.gridTemplateColumns = "repeat(3, 1fr)";
+          customContainer.style.gridGap = "20px";
+
+          // Fetch and display content for each block
+          const blockUrls = settings.custom_homepage_blocks.split(",");
+          blockUrls.forEach((url, index) => {
+            const block = document.createElement("div");
+            block.className = "custom-block";
+            block.innerHTML = `<p>Loading content from: ${url}</p>`;
+
+            // Fetch content from the URL and insert into block
+            fetch(url)
+              .then((response) => response.text())
+              .then((data) => {
+                block.innerHTML = data;
+                console.log(`Content loaded for block ${index + 1}`);
+              })
+              .catch((error) => {
+                block.innerHTML = `<p>Error loading content from: ${url}</p>`;
+                console.error(
+                  `Error loading content for block ${index + 1}:`,
+                  error
+                );
+              });
+
+            customContainer.appendChild(block);
           });
 
-        customContainer.appendChild(block);
+          // Insert custom container into the page
+          mainOutlet.parentNode.insertBefore(
+            customContainer,
+            mainOutlet.nextSibling
+          );
+        });
       });
-
-      // Insert custom container into the page
-      const mainOutlet = document.getElementById("main-outlet");
-      mainOutlet.parentNode.insertBefore(
-        customContainer,
-        mainOutlet.nextSibling
-      );
     });
   },
 };
