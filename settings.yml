@@ -1,0 +1,13 @@
+custom_homepage_enabled:
+  type: bool
+  default: true
+  client: true
+  description:
+    en: "Enable custom homepage layout."
+
+custom_homepage_blocks:
+  type: list
+  default: "https://cr.cryptoast.fr/t/crypto-update-10-05-2024-la-transition/1868, https://cr.cryptoast.fr/t/crypto-update-10-05-2024-la-transition/1868, https://cr.cryptoast.fr/t/crypto-update-10-05-2024-la-transition/1868, https://cr.cryptoast.fr/t/crypto-update-10-05-2024-la-transition/1868, https://cr.cryptoast.fr/t/crypto-update-10-05-2024-la-transition/1868"
+  client: true
+  description:
+    en: "Comma-separated list of URLs for custom homepage blocks."
