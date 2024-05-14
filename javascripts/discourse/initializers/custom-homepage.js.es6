@@ -3,8 +3,8 @@ import { apiInitializer } from "discourse/lib/api";
 export default apiInitializer("0.11.1", (api) => {
   console.log("Initializing custom homepage script...");
 
-  // Log the site settings
-  const settings = api.container.lookup("site-settings:main");
+  // Accessing settings through api.settings
+  const settings = api.settings;
   console.log("Settings object:", settings);
 
   if (!settings.custom_homepage_enabled) {
