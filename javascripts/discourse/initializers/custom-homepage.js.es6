@@ -7,11 +7,11 @@ export default {
     withPluginApi("0.8.14", (api) => {
       console.log("Initializing custom homepage script...");
 
-      // Log the site settings
-      const siteSettings = api.container.lookup("site-settings:main");
-      console.log("Site settings:", siteSettings);
+      // Correct way to access settings
+      const settings = api.container.lookup("site-settings:main");
+      console.log("Settings object:", settings);
 
-      if (!siteSettings.custom_homepage_enabled) {
+      if (!settings.custom_homepage_enabled) {
         console.log("Custom homepage is not enabled.");
         return;
       }
@@ -39,7 +39,7 @@ export default {
       const customHomepage = document.createElement("div");
       customHomepage.classList.add("custom-homepage");
 
-      const blocks = siteSettings.custom_homepage_blocks.split(",");
+      const blocks = settings.custom_homepage_blocks.split(",");
       console.log("Blocks to be added:", blocks);
 
       blocks.forEach((block, index) => {
