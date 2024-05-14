@@ -16,6 +16,12 @@ export default {
         return;
       }
 
+      // Check if the current URL is the homepage
+      if (window.location.pathname !== "/") {
+        console.log("Not on the homepage, exiting script.");
+        return;
+      }
+
       // Log the body structure for debugging
       console.log("Body structure:", document.body);
 
@@ -52,7 +58,7 @@ export default {
           .then((response) => {
             if (!response.ok) {
               throw new Error(
-                "Network response was not ok " + response.statusText
+                `Network response was not ok ${response.statusText}`
               );
             }
             return response.json();
@@ -61,10 +67,10 @@ export default {
             const postStream = data.post_stream.posts;
             let content = "";
 
-            // Concatenate the posts content
-            postStream.forEach((post) => {
+            // Use for...of loop to concatenate the posts content
+            for (const post of postStream) {
               content += post.cooked;
-            });
+            }
 
             // Insert the content into the div
             topicDiv.innerHTML = content;
