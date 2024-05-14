@@ -61,11 +61,13 @@ export default {
           const block = document.createElement("div");
           block.className = "custom-block";
           block.innerHTML = `<p>Loading content from: ${url}</p>`;
+          customContainer.appendChild(block);
 
           // Fetch content from the URL and insert into block
           fetch(url)
             .then((response) => response.text())
             .then((data) => {
+              console.log(`Fetched content for block ${index + 1}:`, data);
               block.innerHTML = data;
               console.log(`Content loaded for block ${index + 1}`);
             })
@@ -76,8 +78,6 @@ export default {
                 error
               );
             });
-
-          customContainer.appendChild(block);
         });
 
         // Insert custom container into the page
