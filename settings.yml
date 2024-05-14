@@ -5,37 +5,9 @@ custom_homepage_enabled:
   description:
     en: "Enable custom homepage layout."
 
-custom_homepage_block1:
-  type: text
-  default: ""
+custom_homepage_blocks:
+  type: list
+  default: "https://example.com/block1, https://example.com/block2, https://example.com/block3, https://example.com/block4, https://example.com/block5"
   client: true
   description:
-    en: "URL for content in the first block."
-
-custom_homepage_block2:
-  type: text
-  default: ""
-  client: true
-  description:
-    en: "URL for content in the second block."
-
-custom_homepage_block3:
-  type: text
-  default: ""
-  client: true
-  description:
-    en: "URL for content in the third block."
-
-custom_homepage_block4:
-  type: text
-  default: ""
-  client: true
-  description:
-    en: "URL for content in the fourth block."
-
-custom_homepage_block5:
-  type: text
-  default: ""
-  client: true
-  description:
-    en: "URL for content in the fifth block."
+    en: "Comma-separated list of URLs for custom homepage blocks."

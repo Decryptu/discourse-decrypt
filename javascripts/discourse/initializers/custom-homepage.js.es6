@@ -33,20 +33,18 @@ export default {
       const customHomepage = document.createElement("div");
       customHomepage.classList.add("custom-homepage");
 
-      const blocks = [
-        api.container.lookup("site-settings:main").custom_homepage_block1,
-        api.container.lookup("site-settings:main").custom_homepage_block2,
-        api.container.lookup("site-settings:main").custom_homepage_block3,
-        api.container.lookup("site-settings:main").custom_homepage_block4,
-        api.container.lookup("site-settings:main").custom_homepage_block5,
-      ];
+      const blocks = api.container
+        .lookup("site-settings:main")
+        .custom_homepage_blocks.split(",");
 
       blocks.forEach((block, index) => {
         const blockElement = document.createElement("div");
         blockElement.classList.add("block");
-        blockElement.innerHTML = `<iframe src="${block}" frameborder="0" width="100%" height="300px"></iframe>`;
+        blockElement.innerHTML = `<iframe src="${block.trim()}" frameborder="0" width="100%" height="300px"></iframe>`;
         customHomepage.appendChild(blockElement);
-        console.log(`Block ${index + 1} added with content from ${block}`);
+        console.log(
+          `Block ${index + 1} added with content from ${block.trim()}`
+        );
       });
 
       document.querySelector(".contents").prepend(customHomepage);
