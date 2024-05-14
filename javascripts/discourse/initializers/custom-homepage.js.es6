@@ -1,47 +1,59 @@
-import { apiInitializer } from "discourse/lib/api";
+import { withPluginApi } from "discourse/lib/plugin-api";
 
-export default apiInitializer("0.11.1", (api) => {
-  console.log("Initializing custom homepage script...");
+export default {
+  name: "custom-homepage",
 
-  // Accessing settings through api.settings
-  const settings = api.settings;
-  console.log("Settings object:", settings);
+  initialize() {
+    withPluginApi("0.8.14", (api) => {
+      console.log("Initializing custom homepage script...");
 
-  if (!settings.custom_homepage_enabled) {
-    console.log("Custom homepage is not enabled.");
-    return;
-  }
+      // Access site settings directly from the settings object
+      const settings = Discourse.SiteSettings;
+      console.log("Settings object:", settings);
 
-  const currentUser = api.getCurrentUser();
-  console.log("Current user:", currentUser);
+      if (!settings.custom_homepage_enabled) {
+        console.log("Custom homepage is not enabled.");
+        return;
+      }
 
-  if (!currentUser || !currentUser.admin) {
-    console.log("Current user is not an admin.");
-    return;
-  }
+      const currentUser = api.getCurrentUser();
+      console.log("Current user:", currentUser);
 
-  console.log("Custom homepage is enabled and the current user is an admin.");
+      if (!currentUser || !currentUser.admin) {
+        console.log("Current user is not an admin.");
+        return;
+      }
 
-  const categoriesSection = document.querySelector(".categories-and-latest");
-  if (categoriesSection) {
-    categoriesSection.style.display = "none";
-    console.log("Default categories section hidden.");
-  }
+      console.log(
+        "Custom homepage is enabled and the current user is an admin."
+      );
 
-  const customHomepage = document.createElement("div");
-  customHomepage.classList.add("custom-homepage");
+      const categoriesSection = document.querySelector(
+        ".categories-and-latest"
+      );
+      if (categoriesSection) {
+        categoriesSection.style.display = "none";
+        console.log("Default categories section hidden.");
+      }
 
-  const blocks = settings.custom_homepage_blocks.split(",");
-  console.log("Blocks to be added:", blocks);
+      const customHomepage = document.createElement("div");
+      customHomepage.classList.add("custom-homepage");
 
-  blocks.forEach((block, index) => {
-    const blockElement = document.createElement("div");
-    blockElement.classList.add("block");
-    blockElement.innerHTML = `<iframe src="${block.trim()}" frameborder="0" width="100%" height="300px"></iframe>`;
-    customHomepage.appendChild(blockElement);
-    console.log(`Block ${index + 1} added with content from ${block.trim()}`);
-  });
+      const blocks = settings.custom_homepage_blocks.split(",");
+      console.log("Blocks to be added:", blocks);
 
-  document.querySelector(".contents").prepend(customHomepage);
-  console.log("Custom homepage layout prepended to contents.");
-});
+      blocks.forEach((block, index) => {
+        const blockElement = document.createElement("div");
+        blockElement.classList.add("block");
+        blockElement.innerHTML = `<iframe src="${block.trim()}" frameborder="0" width="100%" height="300px"></iframe>`;
+        customHomepage.appendChild(blockElement);
+        console.log(
+          `Block ${index + 1} added with content from ${block.trim()}`
+        );
+      });
+
+      document.querySelector(".contents").prepend(customHomepage);
+      console.log("Custom homepage layout prepended to contents.");
+    });
+  },
+};
