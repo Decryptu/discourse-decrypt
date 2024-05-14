@@ -3,11 +3,11 @@ import { withPluginApi } from "discourse/lib/plugin-api";
 export default {
   name: "custom-homepage",
 
-  initialize(container) {
-    withPluginApi("0.8.7", (api) => {
+  initialize() {
+    withPluginApi("0.8.14", (api) => {
       console.log("Initializing custom homepage script...");
 
-      if (!api.getSiteSetting("custom_homepage_enabled")) {
+      if (!api.container.lookup("site-settings:main").custom_homepage_enabled) {
         console.log("Custom homepage is not enabled.");
         return;
       }
@@ -34,11 +34,11 @@ export default {
       customHomepage.classList.add("custom-homepage");
 
       const blocks = [
-        api.getSiteSetting("custom_homepage_block1"),
-        api.getSiteSetting("custom_homepage_block2"),
-        api.getSiteSetting("custom_homepage_block3"),
-        api.getSiteSetting("custom_homepage_block4"),
-        api.getSiteSetting("custom_homepage_block5"),
+        api.container.lookup("site-settings:main").custom_homepage_block1,
+        api.container.lookup("site-settings:main").custom_homepage_block2,
+        api.container.lookup("site-settings:main").custom_homepage_block3,
+        api.container.lookup("site-settings:main").custom_homepage_block4,
+        api.container.lookup("site-settings:main").custom_homepage_block5,
       ];
 
       blocks.forEach((block, index) => {

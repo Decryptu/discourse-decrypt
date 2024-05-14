@@ -1,23 +1,41 @@
 custom_homepage_enabled:
+  type: bool
   default: true
   client: true
+  description:
+    en: "Enable custom homepage layout."
 
 custom_homepage_block1:
+  type: text
   default: ""
   client: true
+  description:
+    en: "URL for content in the first block."
 
 custom_homepage_block2:
+  type: text
   default: ""
   client: true
+  description:
+    en: "URL for content in the second block."
 
 custom_homepage_block3:
+  type: text
   default: ""
   client: true
+  description:
+    en: "URL for content in the third block."
 
 custom_homepage_block4:
+  type: text
   default: ""
   client: true
+  description:
+    en: "URL for content in the fourth block."
 
 custom_homepage_block5:
+  type: text
   default: ""
   client: true
+  description:
+    en: "URL for content in the fifth block."
