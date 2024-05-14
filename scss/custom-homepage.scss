@@ -1,0 +1,21 @@
+#custom-homepage-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    margin: 20px 0;
+
+    .custom-block {
+        max-height: 400px;
+        overflow-y: scroll;
+        border: 1px solid #ccc;
+        padding: 10px;
+    }
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+
+        .custom-block {
+            max-height: 200px;
+        }
+    }
+}
