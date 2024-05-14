@@ -33,7 +33,7 @@ export default {
 
         // Append the div to the homepage (change the selector if needed)
         const homepageContainer = document.querySelector(
-          "#main-outlet-wrapper"
+          "#ember3.discourse-root.ember-view"
         );
         if (homepageContainer) {
           homepageContainer.appendChild(topicDiv);
