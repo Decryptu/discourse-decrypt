@@ -2,8 +2,8 @@
 
 <script type="text/discourse-plugin" version="0.8">
   api.decorateWidget('header:before', helper => {
-    const siteHeader = document.querySelector('.d-header .contents');
-    if (siteHeader) {
+    const logoWrapper = document.querySelector('.home-logo-wrapper-outlet');
+    if (logoWrapper) {
       const buttonsContainer = document.createElement('div');
       buttonsContainer.className = 'custom-header-buttons';
 
@@ -13,7 +13,7 @@
         <a href="https://cr.cryptoast.fr/tag/cr/?order=created&period=all" class="header-button">Dernières analyses</a>
       `;
 
-      siteHeader.appendChild(buttonsContainer);
+      logoWrapper.parentNode.insertBefore(buttonsContainer, logoWrapper.nextSibling);
     }
   });
 </script>
