@@ -117,7 +117,7 @@ export default {
               container.style.maxHeight = isCollapsed ? "24px" : "400px"; // Toggle height
               button.innerHTML = isCollapsed ? "&#x25BC;" : "&#x25B2;"; // Toggle chevron symbol
               button.style.transform = isCollapsed
-                ? "rotate(270deg)"
+                ? "rotate(45deg)"
                 : "rotate(0deg)"; // Toggle rotation
             });
 
