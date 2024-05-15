@@ -8,23 +8,12 @@ export default {
 
   initialize() {
     withPluginApi('0.8', api => {
-      api.createWidget('custom-header-buttons', {
-        tagName: 'div.custom-header-buttons',
-        buildKey: () => 'custom-header-buttons',
-
-        html() {
-          return [
-            h('a.header-button', { href: 'https://cr.cryptoast.fr/t/tuto-de-prise-en-main-de-la-plateforme/7' }, 
-              h('span.text-version', 'Tuto prise en main')),
-            h('a.header-button', { href: 'https://cr.cryptoast.fr/t/lancement-du-parcours-de-formation/1444' }, 
-              h('span.text-version', 'Formation')),
-            h('a.header-button', { href: 'https://cr.cryptoast.fr/tag/cr/?order=created&period=all' }, 
-              h('span.text-version', 'Dernières analyses'))
-          ];
-        }
-      });
-
       api.decorateWidget('header:after', helper => {
+        // Ensure this code only runs once by checking for the existence of the custom buttons
+        if (document.querySelector('.custom-header-buttons')) {
+          return;
+        }
+
         // Create container for custom buttons
         const buttonsContainer = document.createElement('div');
         buttonsContainer.className = 'custom-header-buttons';
