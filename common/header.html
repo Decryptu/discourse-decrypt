@@ -2,6 +2,11 @@
 
 <script type="text/discourse-plugin" version="0.8">
   api.decorateWidget('header:before', helper => {
+    // Ensure this code only runs once
+    if (document.querySelector('.custom-header-buttons')) {
+      return;
+    }
+
     const logoWrapper = document.querySelector('.home-logo-wrapper-outlet');
     if (logoWrapper) {
       const buttonsContainer = document.createElement('div');
