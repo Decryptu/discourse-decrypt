@@ -116,6 +116,9 @@ export default {
               const isCollapsed = container.classList.toggle("collapsed");
               container.style.maxHeight = isCollapsed ? "32px" : "400px"; // Toggle height
               button.innerHTML = isCollapsed ? "&#x25BC;" : "&#x25B2;"; // Toggle chevron symbol
+              button.style.transform = isCollapsed
+                ? "rotate(180deg)"
+                : "rotate(0deg)"; // Toggle rotation
             });
 
             return button;
@@ -125,10 +128,14 @@ export default {
           topicUrls.forEach((url, index) => {
             const block = document.createElement("div");
             block.className = "admin-block";
-            block.style.maxHeight = "400px";
+            block.style.maxHeight = window.innerWidth <= 768 ? "32px" : "400px"; // Set default state based on screen width
             block.style.overflowY = "scroll";
             block.style.padding = "10px";
             block.style.margin = "10px 0";
+
+            if (window.innerWidth <= 768) {
+              block.classList.add("collapsed"); // Default collapsed on mobile
+            }
 
             // Append the block to the grid container
             gridContainer.appendChild(block);
