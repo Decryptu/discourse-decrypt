@@ -832,10 +832,6 @@ div.poll{
 
 /* admin menu */
 
-.select-kit .select-kit-row.is-selected{
-  background-color: var(--tertiary);
-}
-
 .admin-customize .themes-list-container__item:not(.inactive-indicator):not(.selected):hover{
   background-color: var(--secondary-low);
 }
@@ -1300,7 +1296,7 @@ nav.post-controls .actions button.create{
 }
 
 .select-kit .select-kit-row.is-selected{
-  background-color: var(--primary-low);
+  background-color: var(--tertiary);
 }
 
 .discourse-no-touch .btn-flat:hover, .discourse-no-touch .btn-flat.btn-hover{
