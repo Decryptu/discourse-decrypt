@@ -4,12 +4,11 @@ export default {
   name: "second-header",
   initialize() {
     withPluginApi("0.8", (api) => {
-      api.onPageChange((url, title) => {
-        // Ensure this runs only on the homepage
-        if (url === "/" && window.innerWidth <= 767) {
-          // mobile check
-          const existingSecondHeader = document.querySelector(".second-header");
-          if (!existingSecondHeader) {
+      const insertSecondHeader = () => {
+        // Check if we are on the homepage and on mobile
+        if (window.location.pathname === "/" && window.innerWidth <= 767) {
+          // Check if the second header already exists
+          if (!document.querySelector(".second-header")) {
             const secondHeader = document.createElement("div");
             secondHeader.className = "second-header";
             secondHeader.innerHTML = `
@@ -23,8 +22,20 @@ export default {
               header.insertAdjacentElement("afterend", secondHeader);
             }
           }
+        } else {
+          // Remove the second header if it exists and we are not on the homepage
+          const existingSecondHeader = document.querySelector(".second-header");
+          if (existingSecondHeader) {
+            existingSecondHeader.remove();
+          }
         }
-      });
+      };
+
+      // Run on page change
+      api.onPageChange(insertSecondHeader);
+
+      // Run on initial load
+      insertSecondHeader();
     });
   },
 };
