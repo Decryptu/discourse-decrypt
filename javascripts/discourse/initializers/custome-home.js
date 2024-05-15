@@ -1,21 +1,15 @@
-// javascripts/discourse/initializers/display-topic-for-admins.js
+// javascripts/discourse/initializers/display-topic-for-all.js
 
 import { withPluginApi } from "discourse/lib/plugin-api";
 
 export default {
-  name: "display-topic-for-admins",
+  name: "display-topic-for-all",
   initialize() {
     withPluginApi("0.8", (api) => {
-      const currentUser = api.getCurrentUser();
-
       // Function to add the grid to the homepage
       const addGridToHomepage = () => {
-        // Check if the current URL is the homepage and if the user is an admin
-        if (
-          window.location.pathname === "/" &&
-          currentUser &&
-          currentUser.admin
-        ) {
+        // Check if the current URL is the homepage
+        if (window.location.pathname === "/") {
           // Check if the grid already exists
           if (document.querySelector("#admin-grid-display")) {
             console.log("Grid already exists, not adding again.");
@@ -30,19 +24,12 @@ export default {
 
           // Find the target location to insert the grid container
           const bannerDiv = document.querySelector("#ember7");
-          const mainOutletWrapper = document.querySelector(
-            "#main-outlet-wrapper"
-          );
+          const mainOutletWrapper = document.querySelector("#main-outlet-wrapper");
 
           if (bannerDiv && mainOutletWrapper) {
             // Insert the grid container between bannerDiv and mainOutletWrapper
-            mainOutletWrapper.parentNode.insertBefore(
-              gridContainer,
-              mainOutletWrapper
-            );
-            console.log(
-              "Inserted grid display container between banner and main outlet."
-            );
+            mainOutletWrapper.parentNode.insertBefore(gridContainer, mainOutletWrapper);
+            console.log("Inserted grid display container between banner and main outlet.");
           } else {
             console.log("Target divs not found, grid not inserted.");
             return;
@@ -51,7 +38,7 @@ export default {
           // Hardcoded topic URLs
           const topicUrls = [
             "https://cr.cryptoast.fr/t/analyses-a-la-une/1892",
-            "https://cr.cryptoast.fr/t/actualites-crypto-a-la-une/1893",
+            "https://cr.cryptoast.fr/t/actualites-crypto-a-la-une/1893"
           ];
 
           // Function to fetch and display topic content
@@ -59,9 +46,7 @@ export default {
             fetch(`${url}.json`)
               .then((response) => {
                 if (!response.ok) {
-                  throw new Error(
-                    `Network response was not ok ${response.statusText}`
-                  );
+                  throw new Error(`Network response was not ok ${response.statusText}`);
                 }
                 return response.json();
               })
@@ -90,6 +75,7 @@ export default {
             block.className = "admin-block";
             block.style.maxHeight = "400px";
             block.style.overflowY = "scroll";
+            block.style.border = "1px solid #ccc";
             block.style.padding = "10px";
             block.style.margin = "10px 0";
 
@@ -101,13 +87,11 @@ export default {
             fetchAndDisplayContent(url, block);
           });
         } else {
-          // Remove the grid if not on the homepage or if the user is not an admin
+          // Remove the grid if not on the homepage
           const existingGrid = document.querySelector("#admin-grid-display");
           if (existingGrid) {
             existingGrid.remove();
-            console.log(
-              "Removed grid display container as it is not the homepage or user is not an admin."
-            );
+            console.log("Removed grid display container as it is not the homepage.");
           }
         }
       };
