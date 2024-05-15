@@ -114,6 +114,7 @@ export default {
 
             button.addEventListener("click", () => {
               const isCollapsed = container.classList.toggle("collapsed");
+              container.style.maxHeight = isCollapsed ? "32px" : "400px"; // Toggle height
               button.innerHTML = isCollapsed ? "&#x25BC;" : "&#x25B2;"; // Toggle chevron symbol
             });
 
