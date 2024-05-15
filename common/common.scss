@@ -832,6 +832,10 @@ div.poll{
 
 /* admin menu */
 
+.select-kit .select-kit-row.is-selected{
+  background-color: var(--tertiary);
+}
+
 .admin-customize .themes-list-container__item:not(.inactive-indicator):not(.selected):hover{
   background-color: var(--secondary-low);
 }
