@@ -6,7 +6,7 @@
   grid-gap: 20px;
   max-width: calc(var(--d-sidebar-width) + var(--d-max-width) - 16px);
   padding: 8px 8px 0 8px;
-  margin: 0 auto;  /* Center the grid horizontally */
+  margin: 0 auto; /* Center the grid horizontally */
   min-height: 200px;
 }
 
@@ -27,14 +27,14 @@
   backdrop-filter: blur(8px);
   background-color: var(--secondary);
   border: 1px solid var(--secondary-high);
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   box-shadow: none;
   position: relative;
   transition: max-height 0.3s ease;
 }
 
 .admin-block.collapsed {
-  max-height: 32px;
+  max-height: 24px;
   overflow: hidden;
 }
 
