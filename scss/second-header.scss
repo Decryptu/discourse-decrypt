@@ -2,11 +2,18 @@
     display: flex;
     justify-content: space-around;
     padding: 10px;
-    background-color: #f8f9fa; // Light grey background
+    background-color: var(--secondary-medium);
+    border-bottom: 0.8px solid var(--secondary-low);
+    box-shadow: none;
 
     a {
         text-decoration: none;
-        color: #007bff; // Bootstrap primary color for links
+        color: var(--primary);
         font-weight: bold;
+        font-size: 0.9em; // reduced font size
+        padding: 5px 10px;
+        flex-grow: 1;
+        text-align: center;
+        white-space: nowrap; // ensures the text doesn't wrap
     }
 }
