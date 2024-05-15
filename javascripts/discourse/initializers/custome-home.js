@@ -96,7 +96,9 @@ export default {
           const createCollapseButton = (container) => {
             const button = document.createElement("button");
             button.className = "collapse-button";
-            button.innerHTML = "&#x25B2;";
+            button.innerHTML = container.classList.contains("collapsed")
+              ? "&#x25BC;" // Chevron down symbol
+              : "&#x25B2;"; // Chevron up symbol
 
             button.addEventListener("click", () => {
               const isCollapsed = container.classList.toggle("collapsed");
