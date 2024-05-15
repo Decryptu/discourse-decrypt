@@ -13,6 +13,7 @@
 @media (max-width: 768px) {
   .admin-grid {
     grid-template-columns: 1fr;
+    grid-gap: 0px;
   }
 }
 
