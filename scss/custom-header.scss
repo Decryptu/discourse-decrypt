@@ -22,13 +22,7 @@
 }
 
 @media (max-width: 768px) {
-    .header-button .text-version {
-        display: none;
-    }
-    .header-button svg {
-        display: block;
-    }
-    .home-logo-wrapper-outlet {
+    .custom-header-buttons {
         display: none;
     }
 }
