@@ -1,3 +1,4 @@
+// scss/custom-homepage.scss
 // scss/admin-grid.scss
 
 .admin-grid {
@@ -47,10 +48,6 @@
   cursor: pointer;
   font-size: 1.2em;
   transition: transform 0.3s ease;
-}
-
-.admin-block.collapsed .collapse-button {
-  transform: rotate(180deg);
 }
 
 .skeleton-loader {
