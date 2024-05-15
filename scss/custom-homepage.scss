@@ -1,32 +1,58 @@
 // scss/admin-grid.scss
 
 .admin-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
-    max-width: calc(var(--d-sidebar-width) + var(--d-max-width));
-    padding: 0 8px;
-    margin: 0 auto;  /* Center the grid horizontally */
-    min-height: 200px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  max-width: calc(var(--d-sidebar-width) + var(--d-max-width));
+  padding: 0 8px;
+  margin: 0 auto; /* Center the grid horizontally */
+  min-height: 200px;
+}
+
+@media (max-width: 768px) {
+  .admin-grid {
+    grid-template-columns: 1fr;
   }
-  
-  @media (max-width: 768px) {
-    .admin-grid {
-      grid-template-columns: 1fr;
-    }
+}
+
+.admin-block {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px 0;
+  max-height: 400px;
+  overflow-y: scroll;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  background-color: var(--secondary-very-high);
+  border: 1px solid var(--secondary-high);
+  border-radius: 0.5rem;
+  box-shadow: none;
+  position: relative;
+}
+
+.skeleton-loader {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.skeleton-block {
+  background-color: var(--secondary-medium);
+  height: 20px;
+  border-radius: 4px;
+  animation: skeleton-loading 1.2s infinite;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: var(--secondary-medium);
   }
-  
-  .admin-block {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin: 10px 0;
-    max-height: 400px;
-    overflow-y: scroll;
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px);
-    background-color: var(--secondary-very-high);
-    border: 1px solid var(--secondary-high);
-    border-radius: .5rem;
-    box-shadow: none
+  50% {
+    background-color: var(--secondary-high);
   }
-  
+  100% {
+    background-color: var(--secondary-medium);
+  }
+}

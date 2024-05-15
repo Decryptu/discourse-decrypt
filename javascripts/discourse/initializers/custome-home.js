@@ -24,12 +24,19 @@ export default {
 
           // Find the target location to insert the grid container
           const bannerDiv = document.querySelector("#ember7");
-          const mainOutletWrapper = document.querySelector("#main-outlet-wrapper");
+          const mainOutletWrapper = document.querySelector(
+            "#main-outlet-wrapper"
+          );
 
           if (bannerDiv && mainOutletWrapper) {
             // Insert the grid container between bannerDiv and mainOutletWrapper
-            mainOutletWrapper.parentNode.insertBefore(gridContainer, mainOutletWrapper);
-            console.log("Inserted grid display container between banner and main outlet.");
+            mainOutletWrapper.parentNode.insertBefore(
+              gridContainer,
+              mainOutletWrapper
+            );
+            console.log(
+              "Inserted grid display container between banner and main outlet."
+            );
           } else {
             console.log("Target divs not found, grid not inserted.");
             return;
@@ -38,15 +45,32 @@ export default {
           // Hardcoded topic URLs
           const topicUrls = [
             "https://cr.cryptoast.fr/t/analyses-a-la-une/1892",
-            "https://cr.cryptoast.fr/t/actualites-crypto-a-la-une/1893"
+            "https://cr.cryptoast.fr/t/actualites-crypto-a-la-une/1893",
           ];
+
+          // Function to create skeleton loader
+          const createSkeletonLoader = () => {
+            const skeleton = document.createElement("div");
+            skeleton.className = "skeleton-loader";
+            for (let i = 0; i < 3; i++) {
+              const skeletonBlock = document.createElement("div");
+              skeletonBlock.className = "skeleton-block";
+              skeleton.appendChild(skeletonBlock);
+            }
+            return skeleton;
+          };
 
           // Function to fetch and display topic content
           const fetchAndDisplayContent = (url, container) => {
+            const skeletonLoader = createSkeletonLoader();
+            container.appendChild(skeletonLoader);
+
             fetch(`${url}.json`)
               .then((response) => {
                 if (!response.ok) {
-                  throw new Error(`Network response was not ok ${response.statusText}`);
+                  throw new Error(
+                    `Network response was not ok ${response.statusText}`
+                  );
                 }
                 return response.json();
               })
@@ -58,6 +82,9 @@ export default {
                 for (const post of postStream) {
                   content += post.cooked;
                 }
+
+                // Remove the skeleton loader
+                container.removeChild(skeletonLoader);
 
                 // Insert the content into the container
                 container.innerHTML = content;
@@ -90,7 +117,9 @@ export default {
           const existingGrid = document.querySelector("#admin-grid-display");
           if (existingGrid) {
             existingGrid.remove();
-            console.log("Removed grid display container as it is not the homepage.");
+            console.log(
+              "Removed grid display container as it is not the homepage."
+            );
           }
         }
       };
