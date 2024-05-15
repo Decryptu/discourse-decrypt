@@ -102,6 +102,20 @@ export default {
               });
           };
 
+          // Function to create a collapse button
+          const createCollapseButton = (container) => {
+            const button = document.createElement("button");
+            button.className = "collapse-button";
+            button.innerHTML = "&#x25B2;"; // Chevron up symbol
+
+            button.addEventListener("click", () => {
+              const isCollapsed = container.classList.toggle("collapsed");
+              button.innerHTML = isCollapsed ? "&#x25BC;" : "&#x25B2;"; // Toggle chevron symbol
+            });
+
+            return button;
+          };
+
           // Create blocks and fetch content
           topicUrls.forEach((url, index) => {
             const block = document.createElement("div");
@@ -110,6 +124,10 @@ export default {
             block.style.overflowY = "scroll";
             block.style.padding = "10px";
             block.style.margin = "10px 0";
+
+            // Create and append the collapse button to the block
+            const collapseButton = createCollapseButton(block);
+            block.appendChild(collapseButton);
 
             // Append the block to the grid container
             gridContainer.appendChild(block);
