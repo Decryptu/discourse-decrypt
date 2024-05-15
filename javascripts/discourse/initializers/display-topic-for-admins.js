@@ -10,8 +10,12 @@ export default {
 
       // Function to add the grid to the homepage
       const addGridToHomepage = () => {
-        // Check if the current URL is the homepage
-        if (window.location.pathname === "/") {
+        // Check if the current URL is the homepage and if the user is an admin
+        if (
+          window.location.pathname === "/" &&
+          currentUser &&
+          currentUser.admin
+        ) {
           // Check if the grid already exists
           if (document.querySelector("#admin-grid-display")) {
             console.log("Grid already exists, not adding again.");
@@ -93,12 +97,12 @@ export default {
             fetchAndDisplayContent(url, block);
           });
         } else {
-          // Remove the grid if not on the homepage
+          // Remove the grid if not on the homepage or if the user is not an admin
           const existingGrid = document.querySelector("#admin-grid-display");
           if (existingGrid) {
             existingGrid.remove();
             console.log(
-              "Removed grid display container as it is not the homepage."
+              "Removed grid display container as it is not the homepage or user is not an admin."
             );
           }
         }
