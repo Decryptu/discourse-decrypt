@@ -25,7 +25,7 @@ export default {
                 h(
                   "svg",
                   { viewBox: "0 0 24 24", width: "24", height: "24" },
-                  h("circle", { cx: "12", cy: "12", r: "10", fill: "black" })
+                  h("circle", { cx: "12", cy: "12", r: "10", fill: "gray" })
                 )
               ),
               h(
@@ -41,7 +41,7 @@ export default {
                     y: "4",
                     width: "16",
                     height: "16",
-                    fill: "black",
+                    fill: "gray",
                   })
                 )
               ),
@@ -53,7 +53,7 @@ export default {
                 h(
                   "svg",
                   { viewBox: "0 0 24 24", width: "24", height: "24" },
-                  h("polygon", { points: "12,2 22,22 2,22", fill: "black" })
+                  h("polygon", { points: "12,2 22,22 2,22", fill: "gray" })
                 )
               ),
             ];
