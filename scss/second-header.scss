@@ -1,0 +1,12 @@
+.second-header {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: #f8f9fa; // Light grey background
+
+    a {
+        text-decoration: none;
+        color: #007bff; // Bootstrap primary color for links
+        font-weight: bold;
+    }
+}
