@@ -2,15 +2,17 @@
 
 <script type="text/discourse-plugin" version="0.8">
   api.decorateWidget('header:before', helper => {
+    // Ensure this code only runs once
+    if (document.querySelector('.custom-header-buttons')) {
+      return;
+    }
+
     const logoWrapper = document.querySelector('.home-logo-wrapper-outlet');
     if (logoWrapper) {
-      let buttonsContainer = document.querySelector('.custom-header-buttons');
+      const buttonsContainer = document.createElement('div');
+      buttonsContainer.className = 'custom-header-buttons';
 
-      if (!buttonsContainer) {
-        buttonsContainer = document.createElement('div');
-        buttonsContainer.className = 'custom-header-buttons';
-
-        buttonsContainer.innerHTML = `
+      buttonsContainer.innerHTML = `
         <a href="https://cr.cryptoast.fr/t/tuto-de-prise-en-main-de-la-plateforme/7" class="header-button">
           <span class="text-version">Tuto prise en main</span>
           <span class="icon-version" aria-hidden="true">
@@ -32,10 +34,9 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-line-chart"><path d="M3 3v18h18"></path><path d="m19 9-5 5-4-4-3 3"></path></svg>
           </span>
         </a>
-        `;
+      `;
 
-        logoWrapper.parentNode.insertBefore(buttonsContainer, logoWrapper.nextSibling);
-      }
+      logoWrapper.parentNode.insertBefore(buttonsContainer, logoWrapper.nextSibling);
     }
   });
 </script>
