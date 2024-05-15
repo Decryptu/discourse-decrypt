@@ -28,15 +28,23 @@ export default {
           gridContainer.className = "admin-grid";
           console.log("Created grid display container.");
 
-          // Append the grid container to the homepage
-          const homepageContainer = document.querySelector(
-            "#ember3.discourse-root.ember-view"
+          // Find the target location to insert the grid container
+          const bannerDiv = document.querySelector("#ember7");
+          const mainOutletWrapper = document.querySelector(
+            "#main-outlet-wrapper"
           );
-          if (homepageContainer) {
-            homepageContainer.appendChild(gridContainer);
-            console.log("Appended grid display container to the homepage.");
+
+          if (bannerDiv && mainOutletWrapper) {
+            // Insert the grid container between bannerDiv and mainOutletWrapper
+            mainOutletWrapper.parentNode.insertBefore(
+              gridContainer,
+              mainOutletWrapper
+            );
+            console.log(
+              "Inserted grid display container between banner and main outlet."
+            );
           } else {
-            console.log("Homepage container not found, grid not appended.");
+            console.log("Target divs not found, grid not inserted.");
             return;
           }
 
