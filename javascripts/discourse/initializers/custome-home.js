@@ -100,7 +100,7 @@ export default {
 
             button.addEventListener("click", () => {
               const isCollapsed = container.classList.toggle("collapsed");
-              container.style.maxHeight = isCollapsed ? "24px" : "400px";
+              container.style.maxHeight = isCollapsed ? "20px" : "400px";
               button.innerHTML = isCollapsed ? "&#x25BC;" : "&#x25B2;";
             });
 
@@ -110,7 +110,7 @@ export default {
           topicUrls.forEach((url, index) => {
             const block = document.createElement("div");
             block.className = "admin-block";
-            block.style.maxHeight = window.innerWidth <= 768 ? "24px" : "400px";
+            block.style.maxHeight = window.innerWidth <= 768 ? "20px" : "400px";
             block.style.overflowY = "scroll";
             block.style.padding = "10px";
             block.style.margin = "10px 0";
