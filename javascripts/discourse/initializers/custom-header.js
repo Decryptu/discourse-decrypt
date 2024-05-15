@@ -25,18 +25,27 @@ export default {
       });
 
       api.decorateWidget('header:after', helper => {
+        // Create container for custom buttons
+        const buttonsContainer = document.createElement('div');
+        buttonsContainer.className = 'custom-header-buttons';
+
+        buttonsContainer.innerHTML = `
+          <a href="https://cr.cryptoast.fr/t/tuto-de-prise-en-main-de-la-plateforme/7" class="header-button">
+            <span class="text-version">Tuto prise en main</span>
+          </a>
+          <a href="https://cr.cryptoast.fr/t/lancement-du-parcours-de-formation/1444" class="header-button">
+            <span class="text-version">Formation</span>
+          </a>
+          <a href="https://cr.cryptoast.fr/tag/cr/?order=created&period=all" class="header-button">
+            <span class="text-version">Dernières analyses</span>
+          </a>
+        `;
+
+        // Find the correct container and insert buttons after the logo
         const logoWrapper = document.querySelector('.home-logo-wrapper-outlet');
-        const contentsDiv = logoWrapper?.parentNode;
-
-        if (contentsDiv && logoWrapper) {
-          const buttonsContainer = helper.attach('custom-header-buttons');
-          // We must return the widget node to be inserted
-          return h('div', { className: 'custom-header-buttons-wrapper' }, [
-            buttonsContainer
-          ]);
+        if (logoWrapper) {
+          logoWrapper.parentNode.insertBefore(buttonsContainer, logoWrapper.nextSibling);
         }
-
-        return null;
       });
     });
   }
