@@ -90,7 +90,6 @@ export default {
             block.className = "admin-block";
             block.style.maxHeight = "400px";
             block.style.overflowY = "scroll";
-            block.style.border = "1px solid #ccc";
             block.style.padding = "10px";
             block.style.margin = "10px 0";
 
