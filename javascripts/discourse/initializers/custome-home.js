@@ -52,7 +52,7 @@ export default {
           const createSkeletonLoader = () => {
             const skeleton = document.createElement("div");
             skeleton.className = "skeleton-loader";
-            for (let i = 0; i < 3; i++) {
+            for (let i = 0; i < 5; i++) {
               const skeletonBlock = document.createElement("div");
               skeletonBlock.className = "skeleton-block";
               skeleton.appendChild(skeletonBlock);
