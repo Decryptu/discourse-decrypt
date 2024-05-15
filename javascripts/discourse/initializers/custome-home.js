@@ -95,6 +95,10 @@ export default {
                 // Insert the content into the container
                 container.innerHTML = content;
                 console.log(`Inserted content from ${url} into the container.`);
+
+                // Create and append the collapse button to the block
+                const collapseButton = createCollapseButton(container);
+                container.appendChild(collapseButton);
               })
               .catch((error) => {
                 console.error(`Error fetching content from ${url}:`, error);
@@ -124,10 +128,6 @@ export default {
             block.style.overflowY = "scroll";
             block.style.padding = "10px";
             block.style.margin = "10px 0";
-
-            // Create and append the collapse button to the block
-            const collapseButton = createCollapseButton(block);
-            block.appendChild(collapseButton);
 
             // Append the block to the grid container
             gridContainer.appendChild(block);
