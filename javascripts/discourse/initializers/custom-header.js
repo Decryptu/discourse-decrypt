@@ -24,8 +24,19 @@ export default {
         }
       });
 
-      api.decorateWidget('header-buttons:before', helper => {
-        return helper.attach('custom-header-buttons');
+      api.decorateWidget('header:after', helper => {
+        const logoWrapper = document.querySelector('.home-logo-wrapper-outlet');
+        const contentsDiv = logoWrapper?.parentNode;
+
+        if (contentsDiv && logoWrapper) {
+          const buttonsContainer = helper.attach('custom-header-buttons');
+          // We must return the widget node to be inserted
+          return h('div', { className: 'custom-header-buttons-wrapper' }, [
+            buttonsContainer
+          ]);
+        }
+
+        return null;
       });
     });
   }
