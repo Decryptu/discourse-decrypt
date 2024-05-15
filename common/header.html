@@ -1,1 +1,19 @@
 <div class="background-container"></div>
+
+<script type="text/discourse-plugin" version="0.8">
+  api.decorateWidget('header:before', helper => {
+    const siteHeader = document.querySelector('.d-header .contents');
+    if (siteHeader) {
+      const buttonsContainer = document.createElement('div');
+      buttonsContainer.className = 'custom-header-buttons';
+
+      buttonsContainer.innerHTML = `
+        <a href="https://cr.cryptoast.fr/t/tuto-de-prise-en-main-de-la-plateforme/7" class="header-button">Tuto prise en main</a>
+        <a href="https://cr.cryptoast.fr/t/lancement-du-parcours-de-formation/1444" class="header-button">Formation</a>
+        <a href="https://cr.cryptoast.fr/tag/cr/?order=created&period=all" class="header-button">Dernières analyses</a>
+      `;
+
+      siteHeader.appendChild(buttonsContainer);
+    }
+  });
+</script>

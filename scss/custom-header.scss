@@ -1,0 +1,17 @@
+.custom-header-buttons {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.header-button {
+    padding: 10px;
+    margin-left: 10px;
+    color: #ffffff; /* Adjust this color as needed */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.header-button:hover {
+    text-decoration: underline;
+}
