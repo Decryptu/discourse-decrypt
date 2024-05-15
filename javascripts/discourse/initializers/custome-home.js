@@ -1,15 +1,21 @@
-// javascripts/discourse/initializers/display-topic-for-all.js
+// javascripts/discourse/initializers/display-topic-for-admins.js
 
 import { withPluginApi } from "discourse/lib/plugin-api";
 
 export default {
-  name: "display-topic-for-all",
+  name: "display-topic-for-admins",
   initialize() {
     withPluginApi("0.8", (api) => {
+      const currentUser = api.getCurrentUser();
+
       // Function to add the grid to the homepage
       const addGridToHomepage = () => {
-        // Check if the current URL is the homepage
-        if (window.location.pathname === "/") {
+        // Check if the current URL is the homepage and if the user is an admin
+        if (
+          window.location.pathname === "/" &&
+          currentUser &&
+          currentUser.admin
+        ) {
           // Check if the grid already exists
           if (document.querySelector("#admin-grid-display")) {
             console.log("Grid already exists, not adding again.");
@@ -52,7 +58,7 @@ export default {
           const createSkeletonLoader = () => {
             const skeleton = document.createElement("div");
             skeleton.className = "skeleton-loader";
-            for (let i = 0; i < 5; i++) {
+            for (let i = 0; i < 3; i++) {
               const skeletonBlock = document.createElement("div");
               skeletonBlock.className = "skeleton-block";
               skeleton.appendChild(skeletonBlock);
@@ -113,12 +119,12 @@ export default {
             fetchAndDisplayContent(url, block);
           });
         } else {
-          // Remove the grid if not on the homepage
+          // Remove the grid if not on the homepage or if the user is not an admin
           const existingGrid = document.querySelector("#admin-grid-display");
           if (existingGrid) {
             existingGrid.remove();
             console.log(
-              "Removed grid display container as it is not the homepage."
+              "Removed grid display container as it is not the homepage or user is not an admin."
             );
           }
         }
