@@ -1,6 +1,3 @@
-// javascripts/discourse/initializers/custome-home.js
-// javascripts/discourse/initializers/display-topic-for-admins.js
-
 import { withPluginApi } from "discourse/lib/plugin-api";
 
 export default {
@@ -86,6 +83,8 @@ export default {
 
                 const collapseButton = createCollapseButton(container);
                 container.appendChild(collapseButton);
+
+                adjustScrollbars();
               })
               .catch((error) => {
                 console.error(`Error fetching content from ${url}:`, error);
@@ -113,7 +112,7 @@ export default {
             const block = document.createElement("div");
             block.className = "admin-block";
             block.style.maxHeight = window.innerWidth <= 768 ? "20px" : "400px";
-            block.style.overflowY = "scroll";
+            block.style.overflowY = "hidden"; // Initially set to hidden
             block.style.padding = "10px";
             block.style.margin = "10px 0";
 
@@ -137,11 +136,21 @@ export default {
         }
       };
 
+      const adjustScrollbars = () => {
+        const adminBlocks = document.querySelectorAll(".admin-block");
+        for (const block of adminBlocks) {
+          const isScrollNeeded = block.scrollHeight > block.clientHeight;
+          block.style.overflowY = isScrollNeeded ? "auto" : "hidden";
+        }
+      };
+
       addGridToHomepage();
 
       api.onPageChange((url, title) => {
         addGridToHomepage();
       });
+
+      window.addEventListener("resize", adjustScrollbars);
     });
   },
 };
