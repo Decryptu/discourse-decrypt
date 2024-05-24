@@ -12,7 +12,7 @@ export default {
             const secondHeader = document.createElement("div");
             secondHeader.className = "second-header";
             secondHeader.innerHTML = `
-              <a href="https://cr.cryptoast.fr/t/tuto-de-prise-en-main-de-la-plateforme/7">Tuto prise en main</a>
+              <a href="https://cr.cryptoast.fr/c/bienvenue-informations/4">Guide de bienvenue</a>
               <a href="https://cr.cryptoast.fr/t/formation-fondamentale/1765">Formation</a>
               <a href="https://cr.cryptoast.fr/tag/cr/?order=created&period=all">Dernières analyses</a>
             `;
