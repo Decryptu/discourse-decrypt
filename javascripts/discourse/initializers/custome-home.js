@@ -1,17 +1,11 @@
 import { withPluginApi } from "discourse/lib/plugin-api";
 
 export default {
-  name: "display-topic-for-admins",
+  name: "display-topic-for-all-users",
   initialize() {
     withPluginApi("0.8", (api) => {
-      const currentUser = api.getCurrentUser();
-
       const addGridToHomepage = () => {
-        if (
-          window.location.pathname === "/" &&
-          currentUser &&
-          currentUser.admin
-        ) {
+        if (window.location.pathname === "/") {
           if (document.querySelector("#admin-grid-display")) {
             console.log("Grid already exists, not adding again.");
             return;
@@ -130,7 +124,7 @@ export default {
           if (existingGrid) {
             existingGrid.remove();
             console.log(
-              "Removed grid display container as it is not the homepage or user is not an admin."
+              "Removed grid display container as it is not the homepage."
             );
           }
         }
