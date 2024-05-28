@@ -1532,7 +1532,7 @@ a.chat-drawer-header__title:hover .chat-drawer-header__top-line{
   flex-direction: column;
 }
 
-#sidebar-section-content-chat-channels > .sidebar-section-link-wrapper[data-list-item-name="chat-crypto"] {
+#sidebar-section-content-chat-channels > .sidebar-section-link-wrapper[data-list-item-name="general"] {
   order: 1;
 }
 
@@ -1540,28 +1540,16 @@ a.chat-drawer-header__title:hover .chat-drawer-header__top-line{
   order: 2;
 }
 
-#sidebar-section-content-chat-channels > .sidebar-section-link-wrapper[data-list-item-name="analyse-technique"] {
+#sidebar-section-content-chat-channels > .sidebar-section-link-wrapper[data-list-item-name="analyses"] {
   order: 3;
 }
 
-#sidebar-section-content-chat-channels > .sidebar-section-link-wrapper[data-list-item-name="analyse-on-chain"] {
+#sidebar-section-content-chat-channels > .sidebar-section-link-wrapper[data-list-item-name="hors-sujet"] {
   order: 4;
 }
 
-#sidebar-section-content-chat-channels > .sidebar-section-link-wrapper[data-list-item-name="chat-hors-sujet"] {
+#sidebar-section-content-chat-channels > .sidebar-section-link-wrapper[data-list-item-name="fondateur-master"] {
   order: 5;
-}
-
-#sidebar-section-content-chat-channels > .sidebar-section-link-wrapper[data-list-item-name="high-risk"] {
-  order: 6;
-}
-
-#sidebar-section-content-chat-channels > .sidebar-section-link-wrapper[data-list-item-name="toaster-master"] {
-  order: 7;
-}
-
-#sidebar-section-content-chat-channels > .sidebar-section-link-wrapper[data-list-item-name="team"] {
-  order: 8;
 }
 
 .post-links-container ul li a[href]{
