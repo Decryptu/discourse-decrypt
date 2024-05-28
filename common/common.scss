@@ -1572,3 +1572,33 @@ aside.onebox{
   border: 1px solid var(--primary-low)!important;
     border-radius: 10px!important;
 }
+
+#public-channels {
+  display: grid;
+  grid-template-areas: 
+    "general"
+    "debutant"
+    "analyses"
+    "hors-sujet"
+    "fondateur-master";
+}
+
+[data-chat-channel-id="276"] {
+  grid-area: general;
+}
+
+[data-chat-channel-id="279"] {
+  grid-area: debutant;
+}
+
+[data-chat-channel-id="277"] {
+  grid-area: analyses;
+}
+
+[data-chat-channel-id="278"] {
+  grid-area: hors-sujet;
+}
+
+[data-chat-channel-id="3"] {
+  grid-area: fondateur-master;
+}
