@@ -1153,6 +1153,10 @@ input[type="text"], input[type="password"], input[type="datetime"], input[type="
 
 /* chat bottom */
 
+.chat-message-thread-indicator{
+  background-color: var(--secondary-high);
+}
+
 /* Default color for all chat messages */
 .chat-message-info__username__name {
   color: var(--primary);
