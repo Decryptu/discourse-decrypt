@@ -1159,6 +1159,7 @@ aside.onebox header a[href]{
 
 .chat-message-thread-indicator{
   background-color: var(--secondary-high);
+  border-radius: 5px;
 }
 
 /* Default color for all chat messages */
@@ -1228,6 +1229,7 @@ span.user-title.user-title--team-cryptoast-research {
 
 .chat-drawer-container .chat-message .onebox{
   border: none!important;
+  background-color: var(--secondary-low);
 }
 
 /* dernière visite */
